@@ -7,6 +7,7 @@ import Games from "../pages/Games";
 import Gallery from "../pages/Gallery";
 import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
+import LoginForm from "../components/LoginForm";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
         path: "/contact",
         element: <Contact></Contact>,
       },
+      {
+        path: "/login",
+        element:<LoginForm></LoginForm>
+      }
      
       
     ],
