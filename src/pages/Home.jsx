@@ -1,12 +1,16 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import OurCourses from '../components/OurCourses';
+import OurThoughts from '../components/OurThoughts';
 
 
 const Home = () => {
     return (
-    <div className="container mx-auto p-6">
+    <section className="container mx-auto p-6">
         <Hero></Hero>
-    </div>
+        <OurCourses></OurCourses>
+        <OurThoughts></OurThoughts>
+    </section>
     );
 };
 
