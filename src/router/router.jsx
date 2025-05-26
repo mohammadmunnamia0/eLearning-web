@@ -1,15 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
-import AdmissionForm from "../components/AdmissionForm";
-import LoginForm from "../components/LoginForm";
-import PhotoGallery from "../components/PhotoGallery";
-import VideoGallery from "../components/VideoGallery";
 import Root from "../layout/Root";
+import Home from "../pages/Home";
+import Course from "../pages/Course";
+import Training from "../pages/Trainer";
+import Games from "../pages/Games";
+import Gallery from "../pages/Gallery";
 import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
-import Course from "../pages/Course";
-import Games from "../pages/Games";
-import Home from "../pages/Home";
-import Training from "../pages/Trainer";
+import AdmissionForm from "../components/AdmissionForm";
+import LoginForm from "../components/LoginForm";
+import OurWork from "../components/OurWork";
+import PhotoGallery from "../components/PhotoGAllery";
+import VideoGallery from "../components/VideoGAllery";
 
 export const router = createBrowserRouter([
   {
@@ -35,11 +37,15 @@ export const router = createBrowserRouter([
       },
       {
         path: "/photosGallery",
-        element: <PhotoGallery />,
+        element: <PhotoGallery></PhotoGallery>,
       },
       {
         path: "/VideoGallery",
-        element: <VideoGallery />,
+        element: <VideoGallery></VideoGallery>
+      },
+      {
+        path: "/photosGallery",
+        element: <OurWork></OurWork>,
       },
       {
         path: "/blog",
