@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BlogPostDetail from "./../components/BlogPostDetail";
 
 // Dummy blog post data
 const dummyPosts = [
@@ -44,26 +45,54 @@ const POSTS_PER_PAGE = 3; // Number of posts to show initially and per load
 
 const Blog = () => {
   const [visiblePosts, setVisiblePosts] = useState(POSTS_PER_PAGE);
+  const [selectedPost, setSelectedPost] = useState(null);
 
   const showMorePosts = () => {
     setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + POSTS_PER_PAGE);
   };
 
+  const handleReadMoreClick = (post) => {
+    setSelectedPost(post);
+  };
+
+  const handleBackToList = () => {
+    setSelectedPost(null);
+  };
+
+  if (selectedPost) {
+    return (
+      <BlogPostDetail post={selectedPost} onBackToList={handleBackToList} />
+    );
+  }
+
   return (
     <div className="container mx-auto py-8">
       <h1 className="text-3xl font-bold text-center mb-8">Blog</h1>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-1">
         {dummyPosts.slice(0, visiblePosts).map((post) => (
-          <div key={post.id} className="bg-white p-6 rounded-lg shadow-md">
-            <div className="text-gray-500 text-sm">{post.date}</div>
-            <h2 className="text-xl font-semibold mt-2">{post.title}</h2>
-            <p className="text-gray-700 mt-4">{post.excerpt}</p>
-            <a
-              href="#"
-              className="text-blue-500 hover:underline mt-4 inline-block"
-            >
-              Read more
-            </a>
+          <div key={post.id} className="bg-white p-6 rounded-lg shadow-md flex">
+            <div className="flex-shrink-0 mr-6 text-center">
+              <div className="text-5xl font-bold text-green-600">
+                {post.date.split(" ")[1]}
+              </div>
+              <div className="text-gray-600 text-sm">
+                {post.date.split(" ")[0]}
+              </div>
+            </div>
+            <div>
+              <h2 className="text-xl font-semibold mt-2">{post.title}</h2>
+              <p className="text-gray-700 mt-4">{post.excerpt}</p>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleReadMoreClick(post);
+                }}
+                className="text-blue-500 hover:underline mt-4 inline-block"
+              >
+                Read more
+              </a>
+            </div>
           </div>
         ))}
       </div>

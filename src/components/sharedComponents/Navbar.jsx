@@ -68,7 +68,7 @@ const Navbar = () => {
                   </NavLink>
                 </ul>
               </div>
-              <a className="btn btn-ghost text-xl">Amader Shikkha</a>
+              <NavLink to="/" className="btn btn-ghost text-xl">Amader Shikkha</NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1 flex gap-4">
