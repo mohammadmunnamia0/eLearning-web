@@ -77,7 +77,7 @@ const Footer = () => {
               <p>
                 © 2025 amadershikkha. সর্বস্বত্ব সংরক্ষিত.{" "}
                 <a>
-                  প্রযুক্তিক সহায়তায়: <a className="link link-hover" href="https://mdmunnamia0.vercel.app/">Md Munna Mia</a>
+                  প্রযুক্তিক সহায়তায়: <a className="link link-hover" href="https://genzsoft.cloud/">genzsoft.cloud/</a>
                 </a>
               </p>
             </div>
