@@ -1,9 +1,9 @@
-import React from 'react';
+import { Outlet } from "react-router-dom";
 
 const Gallery = () => {
     return (
         <div>
-            <h1>Gallery</h1>
+            <Outlet />
         </div>
     );
 };

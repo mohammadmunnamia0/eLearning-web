@@ -8,15 +8,22 @@ import Gallery from "../pages/Gallery";
 import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
 import AdmissionForm from "../components/AdmissionForm";
+import LoginForm from "../components/LoginForm";
+import OurWork from "../components/OurWork";
+import PhotoGallery from "../components/PhotoGAllery";
+import VideoGallery from "../components/VideoGAllery";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
     children: [
-      { path: "/", 
-        element: <Home></Home> },
-         {
+      { path: "/", element: <Home></Home> },
+      {
+        path: "/login",
+        element: <LoginForm></LoginForm>,
+      },
+      {
         path: "/course",
         element: <Course></Course>,
       },
@@ -29,8 +36,16 @@ export const router = createBrowserRouter([
         element: <Games></Games>,
       },
       {
-        path: "/gallery",
-        element: <Gallery></Gallery>,
+        path: "/photosGallery",
+        element: <PhotoGallery></PhotoGallery>,
+      },
+      {
+        path: "/VideoGallery",
+        element: <VideoGallery></VideoGallery>
+      },
+      {
+        path: "/photosGallery",
+        element: <OurWork></OurWork>,
       },
       {
         path: "/blog",
@@ -42,9 +57,8 @@ export const router = createBrowserRouter([
       },
       {
         path: "/admission",
-        element:<AdmissionForm></AdmissionForm>
+        element: <AdmissionForm></AdmissionForm>,
       },
- 
     ],
   },
 ]);

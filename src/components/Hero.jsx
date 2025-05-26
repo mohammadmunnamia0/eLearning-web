@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Hero = () => {
   return (
     <section >
@@ -13,7 +15,10 @@ const Hero = () => {
               পেশাগত উন্নয়নের সুযোগ প্রদান করে। এটি সফল ভবিষ্যতের জন্য গঠনমূলক
               ভিত্তি তার করে।
             </p>
-            <button className="btn btn-primary">কোর্সে সমূহ</button>
+             <div className="navbar-start">
+              <NavLink to="/course" className="btn btn-primary ml-2">কোর্সে সমূহ</NavLink>
+              <NavLink to="/admission" className="btn btn-primary ml-2">Admission</NavLink>
+            </div>
           </div>
           <div>
             <img

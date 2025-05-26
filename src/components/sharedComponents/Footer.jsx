@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer bg-base-200 text-base-content p-10 flex justify-between">
+      <footer className="footer bg-teal-700 text-white rounded-t-3xl text-base-content p-10 flex justify-between mt-20">
         <nav>
           <div className="flex items-center gap-2 mb-2">
             <span className="text-2xl">🎓</span>

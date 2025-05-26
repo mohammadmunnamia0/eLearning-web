@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Navbar = () => {
   // Function to determine the style of the nav link based on whether it is active
@@ -17,7 +18,7 @@ const Navbar = () => {
       </div>
       <div className="bg-sky-100">
         <div className="pt-4 pb-4 px-14">
-          <div className="navbar bg-white  rounded-xl shadow-lg">
+          <div className="navbar bg-white  rounded-xl ">
             <div className="navbar-start">
               <div className="dropdown">
                 <div
@@ -72,31 +73,59 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1 flex gap-4">
                 <NavLink to="/" className={navLinkStyle}>
-                  <a>Home</a>
+                  Home
                 </NavLink>
                 <NavLink to="/course" className={navLinkStyle}>
-                  <a>Course</a>
+                  Course
                 </NavLink>
                 <NavLink to="/training" className={navLinkStyle}>
-                  <a>Training</a>
+                  Trainers
                 </NavLink>
-                <NavLink to="/games" className={navLinkStyle}>
-                  <a>Games</a>
-                </NavLink>
-                <NavLink to="/gallery" className={navLinkStyle}>
-                  <a>Gallery</a>
-                </NavLink>
+                {/* <NavLink to="/games" className={navLinkStyle}>
+                  Games
+                </NavLink> */}
+              
+                <div className="dropdown dropdown-hover">
+                  <label
+                    tabIndex={0}
+                    className="flex items-center gap-1 cursor-pointer px-2 py-1 hover:bg-green-100 rounded"
+                  >
+                    Gallery
+                    <RiArrowDropDownLine />
+                  </label>
+                  <ul
+                    tabIndex={0}
+                    className="menu menu-sm dropdown-content bg-base-100 text-black rounded-box shadow mt-3 z-[1] w-48"
+                  >
+                    <li>
+                      <NavLink className={navLinkStyle} to="/photosGallery">
+                        ফটো গ্যালারী
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink className={navLinkStyle} to="/VideoGallery">
+                        ভিডিও গ্যালারী
+                      </NavLink>
+                    </li>
+                  </ul>
+                </div>
+
                 <NavLink to="/blog" className={navLinkStyle}>
-                  <a>Blog</a>
+                  Blog
                 </NavLink>
                 <NavLink to="/contact" className={navLinkStyle}>
-                  <a>Contact</a>
+                  Contact
                 </NavLink>
               </ul>
             </div>
             <div className="navbar-end">
               {/* <a className="btn">Login</a> */}
-              <NavLink to="/admission" className="btn btn-primary ml-2">Admission</NavLink>
+              <NavLink
+                to="/login"
+                className="btn bg-teal-700 text-white rounded-xl ml-2"
+              >
+                Login
+              </NavLink>
             </div>
           </div>
         </div>
