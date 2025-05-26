@@ -10,8 +10,6 @@ import Contact from "../pages/Contact";
 import AdmissionForm from "../components/AdmissionForm";
 import LoginForm from "../components/LoginForm";
 import OurWork from "../components/OurWork";
-import PhotoGallery from "../components/PhotoGAllery";
-import VideoGallery from "../components/VideoGAllery";
 
 export const router = createBrowserRouter([
   {
@@ -34,14 +32,6 @@ export const router = createBrowserRouter([
       {
         path: "/games",
         element: <Games></Games>,
-      },
-      {
-        path: "/photosGallery",
-        element: <PhotoGallery></PhotoGallery>,
-      },
-      {
-        path: "/VideoGallery",
-        element: <VideoGallery></VideoGallery>
       },
       {
         path: "/photosGallery",
