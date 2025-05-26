@@ -96,7 +96,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
               {/* <a className="btn">Login</a> */}
-              <NavLink to="/admission" className="btn btn-primary ml-2">Login</NavLink>
+              <NavLink to="/admission" className="btn btn-primary ml-2">Admission</NavLink>
             </div>
           </div>
         </div>

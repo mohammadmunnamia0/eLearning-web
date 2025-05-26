@@ -6,7 +6,7 @@ import OurWork from '../components/OurWork';
 import WhyChooseUS from '../components/WhyChooseUS';
 import Stats from '../components/stats';
 import Review from '../components/Review';
-import Certificate from '../components/Certificate';
+import Certificates from '../components/certificates';
 
 
 const Home = () => {
@@ -19,7 +19,7 @@ const Home = () => {
         <WhyChooseUS></WhyChooseUS>
         <Stats></Stats>
         <Review></Review>
-        <Certificate></Certificate>
+        <Certificates></Certificates>
         
     </section>
     );
