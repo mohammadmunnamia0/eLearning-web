@@ -1,15 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
-import Root from "../layout/Root";
-import Home from "../pages/Home";
-import Course from "../pages/Course";
-import Training from "../pages/Trainer";
-import Games from "../pages/Games";
-import Gallery from "../pages/Gallery";
-import Blog from "../pages/Blog";
-import Contact from "../pages/Contact";
 import AdmissionForm from "../components/AdmissionForm";
+import PhotoGallery from "../components/Gallery/PhotoGallery";
+import VideoGallery from "../components/Gallery/VideoGallery";
 import LoginForm from "../components/LoginForm";
 import OurWork from "../components/OurWork";
+import Root from "../layout/Root";
+import Blog from "../pages/Blog";
+import Contact from "../pages/Contact";
+import Course from "../pages/Course";
+import Games from "../pages/Games";
+import Home from "../pages/Home";
+import Training from "../pages/Trainer";
 
 export const router = createBrowserRouter([
   {
@@ -48,6 +49,14 @@ export const router = createBrowserRouter([
       {
         path: "/admission",
         element: <AdmissionForm></AdmissionForm>,
+      },
+      {
+        path: "/photoGallery",
+        element: <PhotoGallery></PhotoGallery>,
+      },
+      {
+        path: "/videoGallery",
+        element: <VideoGallery></VideoGallery>,
       },
     ],
   },

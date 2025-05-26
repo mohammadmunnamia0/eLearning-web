@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "./sharedComponents/Button";
 
 const CourseCard = ({
   imageSrc,
@@ -62,11 +63,8 @@ const CourseCard = ({
             </svg>
             পিডিএফ ডাউনলোড করুন।
           </a>
-          <Link
-            to='/admission'
-            className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded text-center"
-          >
-            রেজিস্ট্রেশন করুন
+          <Link to="/admission">
+            <Button>রেজিস্ট্রেশন করুন</Button>
           </Link>
         </div>
       </div>

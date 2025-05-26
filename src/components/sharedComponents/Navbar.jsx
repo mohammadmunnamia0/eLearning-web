@@ -1,12 +1,13 @@
-import { NavLink } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
+import Button from "./Button";
 
 const Navbar = () => {
   // Function to determine the style of the nav link based on whether it is active
   const navLinkStyle = ({ isActive }) => {
     return isActive
-      ? "bg-green-500 text-white rounded px-2 py-1"
-      : "hover:bg-green-100 rounded px-2 py-1";
+      ? "bg-teal-700 text-white rounded px-2 py-1"
+      : "text-gray-800 hover:bg-teal-700 hover:text-white rounded px-2 py-1";
   };
 
   return (
@@ -68,7 +69,9 @@ const Navbar = () => {
                   </NavLink>
                 </ul>
               </div>
-              <NavLink to="/" className="btn btn-ghost text-xl">Amader Shikkha</NavLink>
+              <NavLink to="/" className="btn btn-ghost text-xl">
+                Amader Shikkha
+              </NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1 flex gap-4">
@@ -84,7 +87,7 @@ const Navbar = () => {
                 {/* <NavLink to="/games" className={navLinkStyle}>
                   Games
                 </NavLink> */}
-              
+
                 <div className="dropdown dropdown-hover">
                   <label
                     tabIndex={0}
@@ -98,12 +101,12 @@ const Navbar = () => {
                     className="menu menu-sm dropdown-content bg-base-100 text-black rounded-box shadow mt-3 z-[1] w-48"
                   >
                     <li>
-                      <NavLink className={navLinkStyle} to="/photosGallery">
+                      <NavLink className={navLinkStyle} to="/photoGallery">
                         ফটো গ্যালারী
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink className={navLinkStyle} to="/VideoGallery">
+                      <NavLink className={navLinkStyle} to="/videoGallery">
                         ভিডিও গ্যালারী
                       </NavLink>
                     </li>
@@ -119,12 +122,8 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="navbar-end">
-              {/* <a className="btn">Login</a> */}
-              <NavLink
-                to="/login"
-                className="btn bg-teal-700 text-white rounded-xl ml-2"
-              >
-                Login
+              <NavLink to="/login">
+                <Button>Login</Button>
               </NavLink>
             </div>
           </div>
