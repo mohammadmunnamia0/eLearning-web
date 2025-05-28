@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Button from "./sharedComponents/Button";
 
 const OurCourses = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -133,12 +134,12 @@ const OurCourses = () => {
       )}
 
       <div className="text-center mt-8">
-        <button
+        <Button
           onClick={() => setShowAll(!showAll)}
           className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
         >
           {showAll ? "Show Less" : "Show More"}
-        </button>
+        </Button>
       </div>
     </section>
   );

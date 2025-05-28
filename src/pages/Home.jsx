@@ -4,9 +4,9 @@ import OurCourses from '../components/OurCourses';
 import OurThoughts from '../components/OurThoughts';
 import OurWork from '../components/OurWork';
 import WhyChooseUS from '../components/WhyChooseUS';
-import Stats from '../components/stats';
+import Stats from '../components/Stats';
 import Review from '../components/Review';
-import Certificates from '../components/certificates';
+import Certificates from '../components/Certificates';
 
 
 const Home = () => {

@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import AdmissionForm from "../components/AdmissionForm";
+import PhotoGallery from "../components/Gallery/PhotoGallery";
+import VideoGallery from "../components/Gallery/VideoGallery";
 import LoginForm from "../components/LoginForm";
-import PhotoGallery from "../components/PhotoGallery";
-import VideoGallery from "../components/VideoGallery";
+import OurWork from "../components/OurWork";
 import Root from "../layout/Root";
 import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
@@ -35,11 +36,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/photosGallery",
-        element: <PhotoGallery />,
-      },
-      {
-        path: "/VideoGallery",
-        element: <VideoGallery />,
+        element: <OurWork></OurWork>,
       },
       {
         path: "/blog",
@@ -52,6 +49,14 @@ export const router = createBrowserRouter([
       {
         path: "/admission",
         element: <AdmissionForm></AdmissionForm>,
+      },
+      {
+        path: "/photoGallery",
+        element: <PhotoGallery></PhotoGallery>,
+      },
+      {
+        path: "/videoGallery",
+        element: <VideoGallery></VideoGallery>,
       },
     ],
   },

@@ -1,24 +1,25 @@
-import { NavLink } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
+import Button from "./Button";
 
 const Navbar = () => {
   // Function to determine the style of the nav link based on whether it is active
   const navLinkStyle = ({ isActive }) => {
     return isActive
-      ? "bg-green-500 text-white rounded px-2 py-1"
-      : "hover:bg-green-100 rounded px-2 py-1";
+      ? "bg-teal-700 text-white rounded-[12px] px-2 py-1"
+      : "text-gray-800 hover:bg-teal-700 hover:text-white rounded-[12px] px-2 py-1";
   };
 
   return (
     <div>
       <div>
-        <p className="text-center text-2xl font-bold bg-base-200 p-4">
+        <p className="text-center text-[16px] font-nav p-4">
           আমাদের কথা
         </p>
       </div>
       <div className="bg-sky-100">
-        <div className="pt-4 pb-4 px-14">
-          <div className="navbar bg-white  rounded-xl ">
+        <div className="py-[10px] px-[82px]">
+          <div className="navbar bg-white rounded-xl ">
             <div className="navbar-start">
               <div className="dropdown">
                 <div
@@ -68,29 +69,31 @@ const Navbar = () => {
                   </NavLink>
                 </ul>
               </div>
-              <NavLink to="/" className="btn btn-ghost text-xl">Amader Shikkha</NavLink>
+              <NavLink to="/" className="btn btn-ghost ">
+                Amader Shikkha
+              </NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
-              <ul className="menu menu-horizontal px-1 flex gap-4">
-                <NavLink to="/" className={navLinkStyle}>
-                  Home
+              <ul className="menu menu-horizontal px-1 flex gap-8 font-nav">
+                <NavLink  to="/" className={navLinkStyle}>
+                  হোম
                 </NavLink>
                 <NavLink to="/course" className={navLinkStyle}>
-                  Course
+                  কোর্স 
                 </NavLink>
                 <NavLink to="/training" className={navLinkStyle}>
-                  Trainers
+                  প্রশিক্ষক
                 </NavLink>
-                {/* <NavLink to="/games" className={navLinkStyle}>
-                  Games
-                </NavLink> */}
-              
+                <NavLink to="/games" className={navLinkStyle}>
+                  গেমস
+                </NavLink>
+
                 <div className="dropdown dropdown-hover">
                   <label
                     tabIndex={0}
-                    className="flex items-center gap-1 cursor-pointer px-2 py-1 hover:bg-green-100 rounded"
+                    className="flex items-center gap-1 cursor-pointer px-2 py-1 hover:bg-green-100 rounded-[12px]"
                   >
-                    Gallery
+                    গ্যালারী
                     <RiArrowDropDownLine />
                   </label>
                   <ul
@@ -98,12 +101,12 @@ const Navbar = () => {
                     className="menu menu-sm dropdown-content bg-base-100 text-black rounded-box shadow mt-3 z-[1] w-48"
                   >
                     <li>
-                      <NavLink className={navLinkStyle} to="/photosGallery">
+                      <NavLink className={navLinkStyle} to="/photoGallery">
                         ফটো গ্যালারী
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink className={navLinkStyle} to="/VideoGallery">
+                      <NavLink className={navLinkStyle} to="/videoGallery">
                         ভিডিও গ্যালারী
                       </NavLink>
                     </li>
@@ -111,20 +114,16 @@ const Navbar = () => {
                 </div>
 
                 <NavLink to="/blog" className={navLinkStyle}>
-                  Blog
+                  ব্লগ
                 </NavLink>
                 <NavLink to="/contact" className={navLinkStyle}>
-                  Contact
+                  যোগাযোগ
                 </NavLink>
               </ul>
             </div>
-            <div className="navbar-end">
-              {/* <a className="btn">Login</a> */}
-              <NavLink
-                to="/login"
-                className="btn bg-teal-700 text-white rounded-xl ml-2"
-              >
-                Login
+            <div className="navbar-end ">
+              <NavLink to="/login">
+                <Button className="rounded-[12px]">লগইন</Button>
               </NavLink>
             </div>
           </div>

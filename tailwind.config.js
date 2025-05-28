@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        HindSiliguri: ['"Hind Siliguri"', 'sans-serif'],
+      },
+    },
   },
   // eslint-disable-next-line no-undef
   plugins: [require('daisyui')],

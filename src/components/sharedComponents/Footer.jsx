@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer bg-teal-700 text-white rounded-t-3xl text-base-content p-10 flex justify-between mt-20">
+    <div className="bg-teal-700 text-white  rounded-t-3xl ">
+      <footer className="footer text-white text-base-content p-10 flex justify-between mt-20">
         <nav>
           <div className="flex items-center gap-2 mb-2">
             <span className="text-2xl">🎓</span>
@@ -68,16 +68,20 @@ const Footer = () => {
               </a>
             </div>
           </div>
+          
         </nav>
       </footer>
-      <div className="footer footer-center p-4 bg-base-200 text-base-content">
-        <p>
-          © 2025 amadershikkha. সর্বস্বত্ব সংরক্ষিত.{" "}
-          <a href="" className="link link-hover">
-            প্রযুক্তিক সহায়তায়: GenzSoft.Cloud
-          </a>
-        </p>
-      </div>
+      <div className="w-full flex flex-col items-center">
+            <hr className="w-full border-white my-4" />
+            <div className="footer footer-center p-4 text-white text-center">
+              <p>
+                © 2025 amadershikkha. সর্বস্বত্ব সংরক্ষিত.{" "}
+                <a>
+                  প্রযুক্তিক সহায়তায়: <a className="link link-hover" href="https://genzsoft.cloud/">genzsoft.cloud/</a>
+                </a>
+              </p>
+            </div>
+          </div>
     </div>
   );
 };
