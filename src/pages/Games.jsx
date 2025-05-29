@@ -50,7 +50,14 @@ const Games = () => {
     setCurrentAlphabet(randomAlphabets());
   };
 
- 
+   useEffect(() => {
+    if (isGameStarted) {
+      window.addEventListener("keyup", handleKeyPress);
+      return () => {
+        window.removeEventListener("keyup", handleKeyPress);
+      };
+    }
+  }, [isGameStarted, currentAlphabet]);
 
   return (
     <div className="min-h-screen bg-gray-100 py-8">
