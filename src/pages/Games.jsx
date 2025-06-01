@@ -7,11 +7,13 @@ const Games = () => {
   const [life, setLife] = useState(5);
   const [score, setScore] = useState(0);
   const [finalScore, setFinalScore] = useState(0);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const randomAlphabets = () => {
-    const alphabetsString = "abcdefghijklmnopqrstuvwxyz";
+    const alphabetsString =
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const alphabets = alphabetsString.split("");
-    const randomNum = Math.random() * 25;
+    const randomNum = Math.random() * 51;
     const index = Math.round(randomNum);
     return alphabets[index];
   };
@@ -25,7 +27,18 @@ const Games = () => {
     if (event.key === currentAlphabet) {
       setScore((prev) => prev + 1);
       setCurrentAlphabet(randomAlphabets());
+      setErrorMessage("");
+    } else if (event.key.toLowerCase() === currentAlphabet.toLowerCase()) {
+      setErrorMessage("Wrong case! Press the exact case shown.");
+      setLife((prev) => {
+        const newLife = prev - 1;
+        if (newLife === 0) {
+          handleGameOver();
+        }
+        return newLife;
+      });
     } else {
+      setErrorMessage("Wrong key! Try again.");
       setLife((prev) => {
         const newLife = prev - 1;
         if (newLife === 0) {
@@ -47,10 +60,11 @@ const Games = () => {
     setIsGameOver(false);
     setLife(5);
     setScore(0);
+    setErrorMessage("");
     setCurrentAlphabet(randomAlphabets());
   };
 
-   useEffect(() => {
+  useEffect(() => {
     if (isGameStarted) {
       window.addEventListener("keyup", handleKeyPress);
       return () => {
@@ -79,15 +93,23 @@ const Games = () => {
               <div className="text-9xl font-extrabold">{currentAlphabet}</div>
             </div>
 
+            {errorMessage && (
+              <div className="text-center text-red-500 font-bold text-xl mt-4">
+                {errorMessage}
+              </div>
+            )}
+
             <div className="flex justify-center gap-1 my-1 w-full">
               {["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"].map((key) => (
                 <kbd
                   key={key}
                   className={`kbd ${
-                    currentAlphabet === key ? "bg-orange-400" : ""
+                    currentAlphabet.toLowerCase() === key ? "bg-orange-400" : ""
                   }`}
                 >
-                  {key}
+                  {currentAlphabet.toLowerCase() === key
+                    ? currentAlphabet
+                    : key}
                 </kbd>
               ))}
             </div>
@@ -96,10 +118,12 @@ const Games = () => {
                 <kbd
                   key={key}
                   className={`kbd ${
-                    currentAlphabet === key ? "bg-orange-400" : ""
+                    currentAlphabet.toLowerCase() === key ? "bg-orange-400" : ""
                   }`}
                 >
-                  {key}
+                  {currentAlphabet.toLowerCase() === key
+                    ? currentAlphabet
+                    : key}
                 </kbd>
               ))}
             </div>
@@ -108,10 +132,12 @@ const Games = () => {
                 <kbd
                   key={key}
                   className={`kbd ${
-                    currentAlphabet === key ? "bg-orange-400" : ""
+                    currentAlphabet.toLowerCase() === key ? "bg-orange-400" : ""
                   }`}
                 >
-                  {key}
+                  {currentAlphabet.toLowerCase() === key
+                    ? currentAlphabet
+                    : key}
                 </kbd>
               ))}
             </div>
