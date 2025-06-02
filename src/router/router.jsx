@@ -8,6 +8,7 @@ import Root from "../layout/Root";
 import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
 import Course from "../pages/Course";
+import CourseDetails from "../pages/CourseDetails";
 import Games from "../pages/Games";
 import Home from "../pages/Home";
 import Training from "../pages/Trainer";
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "/course",
         element: <Course></Course>,
+      },
+      {
+        path: "/course/:id",
+        element: <CourseDetails></CourseDetails>,
       },
       {
         path: "/training",

@@ -1,89 +1,142 @@
-const Footer = () => {
+const containerClass =
+  "w-full px-4 md:px-20 pt-10 pb-6 bg-teal-700 rounded-tl-3xl rounded-tr-3xl inline-flex flex-col justify-start items-start gap-6";
+const mainFlexClass =
+  "self-stretch inline-flex justify-start items-start gap-28";
+const sectionTitleClass =
+  "justify-start text-white text-base font-semibold font-['Hind_Siliguri']";
+const sectionItemClass =
+  "justify-start text-white text-base font-normal font-['Hind_Siliguri']";
+const contactTitleClass =
+  "self-stretch justify-start text-white text-lg font-semibold font-['Hind_Siliguri'] leading-relaxed";
+const contactItemClass =
+  "self-stretch justify-start text-white text-lg font-medium font-['Hind_Siliguri'] leading-relaxed";
+const followTitleClass =
+  "justify-start text-white text-lg font-bold font-['Hind_Siliguri'] leading-relaxed";
+const hrClass =
+  "self-stretch h-0 outline outline-1 outline-offset-[-0.50px] outline-neutral-400";
+const footerTextClass = "text-white text-lg font-normal";
+
+export default function Footer() {
   return (
-    <div className="bg-teal-700 text-white  rounded-t-3xl ">
-      <footer className="footer text-white text-base-content p-10 flex justify-between mt-20">
-        <nav>
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-2xl">🎓</span>
-            <span className="font-bold text-lg">Amader Shikkha</span>
-          </div>
-          <div className="text-sm mb-4">
-            সবধরনের প্রযুক্তি নির্ভর, ক্যারিয়ার ও বুদ্ধিমূলক শিক্ষা
-          </div>
-        </nav>
-        <nav>
-          <div>
-            <div className="font-semibold mb-2">আমাদের সম্পর্কে</div>
-            <ul className="space-y-1 text-sm">
-              <li>আমাদের কথা</li>
-              <li>সাহায্য</li>
-              <li>প্রশ্ন</li>
-              <li>যোগাযোগ</li>
-            </ul>
-          </div>
-        </nav>
-        <nav>
-          <div>
-            <div className="font-semibold mb-2">গুরুত্বপূর্ণ লিংক</div>
-            <ul className="space-y-1 text-sm">
-              <li>শিক্ষা বোর্ডের ফলাফল</li>
-              <li>এতদ্ব্যতীত আবেদন নিয়মাবলী</li>
-              <li>বাংলাদেশ ই-পাসপোর্ট পোর্টাল</li>
-              <li>ফলাফল প্রকাশের নিয়মাবলী (শিক্ষা বোর্ড)</li>
-              <li>বাংলাদেশ কারিগরি শিক্ষা বোর্ড</li>
-            </ul>
-          </div>
-        </nav>
-        <nav>
-          <div>
-            <div className="font-semibold mb-2">গুরুত্বপূর্ণ মেনু</div>
-            <ul className="space-y-1 text-sm mb-4">
-              <li>কোর্স</li>
-              <li>নিউজ</li>
-              <li>এডমিশন</li>
-              <li>ভেরিফিকেশন</li>
-            </ul>
-          </div>
-        </nav>
-        <nav>
-          <div className="font-semibold mb-2">যোগাযোগ</div>
-          <div className="text-sm mb-1">মোবাইল: 01888666619, 01864776487</div>
-          <div className="text-sm mb-1">ইমেইল: amadershikka@gmail.com</div>
-          <div className="text-sm mb-2">ঠিকানা: Bashundhara, Dhaka</div>
-          <div className="flex gap-2">
-            {" "}
-            ফলো করুন :
-            <div>
-              <a href="#" className="text-blue-500 hover:underline">
-                Facebook
-              </a>
-              <a href="#" className="text-blue-400 hover:underline">
-                Twitter
-              </a>
-              <a href="#" className="text-pink-500 hover:underline">
-                Instagram
-              </a>
-              <a href="#" className="text-blue-700 hover:underline">
-                LinkedIn
-              </a>
+    <div className={containerClass}>
+      <div className={mainFlexClass}>
+        {/* Logo & Description */}
+        <div className="w-72 inline-flex flex-col justify-start items-start gap-3">
+          <div className="inline-flex justify-start items-center gap-1.5">
+            <img
+              className="w-11 h-7"
+              src="https://placehold.co/43x30"
+              alt="Logo"
+            />
+            <div className="justify-start text-white text-xl font-semibold font-['Poppins']">
+              Amader Shikkha
             </div>
           </div>
-          
-        </nav>
-      </footer>
-      <div className="w-full flex flex-col items-center">
-            <hr className="w-full border-white my-4" />
-            <div className="footer footer-center p-4 text-white text-center">
-              <p>
-                © 2025 amadershikkha. সর্বস্বত্ব সংরক্ষিত.{" "}
-                <a>
-                  প্রযুক্তিক সহায়তায়: <a className="link link-hover" href="https://genzsoft.cloud/">genzsoft.cloud/</a>
-                </a>
-              </p>
+          <div className="self-stretch justify-start text-white text-lg font-normal font-['Hind_Siliguri']">
+            সর্ববৃহৎ প্রযুক্তি নির্ভর, কারিগরি ও বৃত্তিমূলক শিক্ষা
+          </div>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="flex-1 flex justify-start items-start gap-12">
+          <div className="inline-flex flex-col justify-start items-start gap-3">
+            <div className={sectionTitleClass}>আমাদের সম্পর্কে</div>
+            <div className={sectionItemClass}>আমাদের কথা</div>
+            <div className={sectionItemClass}>সাহায্য</div>
+            <div className={sectionItemClass}>প্রশ্ন</div>
+            <div className={sectionItemClass}>যোগাযোগ</div>
+          </div>
+          <div className="inline-flex flex-col justify-start items-start gap-3">
+            <div className={sectionTitleClass}>গুরত্বপূর্ণ লিংক</div>
+            <div className={sectionItemClass}>শিক্ষা বোর্ডের ফলাফল</div>
+            <div className={sectionItemClass}>এনআইডি আবেদন সিস্টেম</div>
+            <div className={sectionItemClass}>বাংলাদেশ ই-পাসপোর্ট পোর্টাল</div>
+            <div className={sectionItemClass}>
+              ফলাফল প্রকাশের সিস্টেম (শিক্ষা বোর্ড)
+            </div>
+            <div className={sectionItemClass}>
+              বাংলাদেশ কারিগরি শিক্ষা বোর্ড
             </div>
           </div>
+          <div className="inline-flex flex-col justify-start items-start gap-3">
+            <div className={sectionTitleClass}>গুরত্বপূর্ণ মেনু</div>
+            <div className={sectionItemClass}>কোর্স</div>
+            <div className={sectionItemClass}>নিউজ</div>
+            <div className={sectionItemClass}>এডমিশন</div>
+            <div className={sectionItemClass}>ভেরিফিকেশন</div>
+          </div>
+        </div>
+
+        {/* Contact Info & Follow */}
+        <div className="inline-flex flex-col justify-start items-end gap-6">
+          <div className="flex flex-col justify-center items-start gap-1">
+            <div className={contactTitleClass}>যোগাযোগ</div>
+            <div className={contactItemClass}>
+              মোবাইল: 01888666619, 01864776487
+            </div>
+            <div className={contactItemClass}>
+              ইমেইল: amadershikka@gmail.com
+            </div>
+            <div className={contactItemClass}>ঠিকানা: Bashundhara, Dhaka</div>
+          </div>
+          <div className="flex flex-col justify-start items-center gap-3">
+            <div className={followTitleClass}>ফলো করুন</div>
+            <div className="w-40 inline-flex justify-start items-start gap-8 flex-wrap content-start">
+              {/* Social icons placeholders */}
+              <div className="w-8 h-8 relative">
+                <div className="w-8 h-8 left-0 top-0 absolute bg-blue-600 rounded-[50px]" />
+                <div className="w-4 h-4 left-[8px] top-[8px] absolute bg-white" />
+              </div>
+              <div className="w-8 h-8 relative">
+                <div className="w-8 h-8 left-0 top-0 absolute bg-sky-500 rounded-[50px]" />
+                <div className="w-4 h-3 left-[8px] top-[9.50px] absolute bg-white" />
+              </div>
+              <div className="w-8 h-8 relative">
+                <div className="w-8 h-8 left-0 top-0 absolute bg-blue-800 rounded-[50px]" />
+                <div className="w-4 h-4 left-[8px] top-[8px] absolute bg-white" />
+              </div>
+              <div className="w-8 h-8 relative">
+                <div className="w-8 h-8 left-0 top-0 absolute bg-red-600 rounded-[50px]" />
+                <div className="w-4 h-3 left-[8px] top-[10.40px] absolute bg-white" />
+              </div>
+              <div className="w-8 h-8 relative">
+                <div className="w-8 h-8 left-0 top-0 absolute bg-pink-600 rounded-[50px]" />
+                <div className="w-4 h-4 left-[7.70px] top-[7.70px] absolute bg-white" />
+              </div>
+              <div className="w-8 h-8 relative">
+                <div className="w-8 h-8 left-0 top-0 absolute bg-black" />
+                <div className="w-1.5 h-2 left-[9px] top-[13.63px] absolute bg-cyan-400" />
+                <div className="w-1.5 h-3.5 left-[12.82px] top-[8px] absolute bg-cyan-400" />
+                <div className="w-0.5 h-[1.18px] left-[20.36px] top-[11.07px] absolute bg-cyan-400" />
+                <div className="w-[1.60px] h-[2.40px] left-[18.76px] top-[8.67px] absolute bg-rose-500" />
+                <div className="w-1 h-1.5 left-[11.64px] top-[14.30px] absolute bg-rose-500" />
+                <div className="w-3 h-3 left-[11.07px] top-[12.25px] absolute bg-rose-500" />
+                <div className="w-3 h-3.5 left-[9.77px] top-[8.67px] absolute bg-white" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="self-stretch flex flex-col justify-start items-center gap-6">
+        <div className={hrClass}></div>
+        <div className="self-stretch px-96 flex flex-col justify-start items-start">
+          <div className="w-[514.27px] text-center justify-start">
+            <span className={`${footerTextClass} font-['Poppins']`}>
+              © 2025 amadershikka.{" "}
+            </span>
+            <span className={`${footerTextClass} font-['Hind_Siliguri']`}>
+              স্বর্বসত্ব সংরক্ষিত
+            </span>
+            <span className={`${footerTextClass} font-['Poppins']`}>.</span>
+          </div>
+          <div
+            className={`w-[514.27px] text-center justify-start ${footerTextClass} font-['Hind_Siliguri']`}
+          >
+            প্রযুক্তিক সহযোগিতায়: GenzSoft.Cloud
+          </div>
+        </div>
+      </div>
     </div>
   );
-};
-
-export default Footer;
+}

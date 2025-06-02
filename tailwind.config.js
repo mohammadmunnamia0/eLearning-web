@@ -13,5 +13,15 @@ export default {
   },
   // eslint-disable-next-line no-undef
   plugins: [require('daisyui')],
+   daisyui: {
+    themes: ["light", "dark"], // include the themes you want
+    darkTheme: "dark",         // optional: define which one is used for dark
+    base: true,
+    styled: true,
+    utils: true,
+    logs: false,
+    rtl: false,
+    prefix: "",
+  },
 }
 
