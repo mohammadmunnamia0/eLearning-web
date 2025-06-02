@@ -26,13 +26,7 @@ const Hero = () => {
                   </div>
                 </div>
               </NavLink>
-              <NavLink to="/admission" className="w-full sm:w-auto">
-                <div className="inline-flex items-center justify-center gap-2 px-4 md:px-6 py-3 bg-[#FF9900] rounded shadow-[0px_4px_7px_rgba(255,153,0,0.71)] overflow-hidden">
-                  <div className="text-white text-base font-semibold font-[Hind_Siliguri] break-words">
-                    Admission
-                  </div>
-                </div>
-              </NavLink>
+             
             </div>
           </div>
           <div className="w-full lg:w-auto">
