@@ -3,7 +3,7 @@ import React from "react";
 const WhyChooseUS = () => {
   return (
     <section className="mt-[135px]">
-      <div className="w-[1440px] h-[771px] relative overflow-hidden">
+      <div className="max-w-[1440px] mx-auto h-[771px] relative overflow-hidden">
         <div>
           <div className="left-[83px] top-[91px] absolute inline-flex flex-col justify-center items-start gap-0.5">
             <div className="w-[618px] justify-start text-black text-3xl font-semibold font-['Hind_Siliguri']">
@@ -114,7 +114,7 @@ const WhyChooseUS = () => {
           </div>
 
           {/* Placeholder for image */}
-          <div className="absolute right-[83px] top-[91px] w-[574px] h-[589px] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg shadow-lg">
+          <div className="absolute right-[93px] top-[221px] w-[474px] h-[489px] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg shadow-lg">
             {/* This div will be replaced with an image later */}
           </div>
         </div>
