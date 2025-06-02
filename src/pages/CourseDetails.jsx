@@ -33,7 +33,7 @@ const CourseDetails = () => {
             <div className="w-[502px] flex flex-col justify-start items-start gap-4">
               <div className="self-stretch flex flex-col justify-start items-start gap-4">
                 <div className="self-stretch flex flex-col justify-start items-start">
-                  <div className="self-stretch text-center justify-start">
+                  <div className="self-stretch justify-start">
                     <span className="text-black text-3xl font-semibold font-['Hind_Siliguri']">
                       কোর্স{" "}
                     </span>
