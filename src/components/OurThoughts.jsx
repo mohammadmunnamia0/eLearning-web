@@ -2,77 +2,118 @@ import { FaArrowsAlt, FaBullseye, FaHeart, FaTrophy } from "react-icons/fa";
 
 const OurThoughts = () => {
   return (
-    <section className="our-thoughts-section mt-20">
-      <div className="container mx-auto flex flex-col lg:flex-row">
-        {/* Left Section */}
-        <div className="our-thoughts-left lg:w-1/2 p-4">
-          <h2 className="text-3xl font-bold mb-4">আমাদের কথা</h2>
-          <p className="mb-6">
-            কোথায় না ব্যবহার হচ্ছে। কৃষি থেকে রকট এই ডিজিটাল যুগে বদলে যাচ্ছে
-            জীবন জীবিকা। এই ডিজিটাল যুগকে বলা হচ্ছে কম্পিউটারের স্বর্ণযুগ। এই
-            লক্ষ্যে আমরা কোম্পানীগঞ্জ উপজেলার প্রাণকেন্দ্র উপজেলা পরিষদের সামনে
-            ও কোম্পানীগঞ্জ থানার মাত্র ৪০ গজ দক্ষিনে মামুন টাওয়ার এর ৪র্থ তলায়
-            কারিগরি শিক্ষা বোর্ড অনুমোদিত কোম্পানীগঞ্জের সর্ববৃহৎ প্রযুক্তি
-            নির্ভর, কারিগরি ও বৃত্তিমূলক শিক্ষা প্রসার করার জন্য মা কম্পিউটার
-            ট্রেনিং সেন্টার একটি সর্বাধুনিক মানসম্পন্ন শিক্ষা প্রতিষ্ঠান গড়ে
-            তুলেছি। শুধুমাত্র ব্যক্তিগত চাহিদা নয় বরং জাতীয় বা আন্তর্জাতিক
-            চাহিদানুযায়ী কম্পিউটার প্রযুক্তিতে বিভিন্ন বিষয়ে প্রশিক্ষণের
-            মাধ্যমে জনশক্তিকে আত্মবিশ্বাসী ও নির্ভরশীল হিসেবে গড়ে তোলা * মা
-            কম্পিউটার ট্রেনিং সেন্টার এর মূল উদ্দেশ্যে।
-          </p>
-          <button className="bg-teal-600 text-white py-2 px-6 rounded hover:bg-teal-700">
-            বিস্তারিত
-          </button>
-        </div>
-
-        {/* Right Section - Cards */}
-        <div className="our-thoughts-right lg:w-1/2 p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Card 1 */}
-          <div className="card  p-6 rounded-lg flex flex-col items-center text-center">
-            <div className="icon-container mb-4 text-4xl text-red-600">
-              <FaBullseye />
-            </div>{" "}
-            {/* Icon for Mission and Vision */}
-            <h3 className="text-xl font-semibold mb-2">মিশন ও ভিশন</h3>
-            <button className="border py-2 px-6 rounded hover:bg-gray-100">
-              বিস্তারিত
-            </button>
+    <section className="mt-[147px]">
+      <div class="relative w-[1440px] h-[424px] overflow-hidden">
+        <div class="absolute left-[90px] top-[41px] inline-flex gap-[145px] items-center">
+          <div class="inline-flex flex-col items-start gap-4">
+            <div class="flex flex-col justify-center items-start gap-[2px]">
+              <div class="w-[618px] text-black text-[32px] font-hind-siliguri font-semibold">
+                আমাদের কথা
+              </div>
+              <div class="w-[744px] text-black text-[18px] font-hind-siliguri font-normal">
+                কোথায় না ব্যবহার হচ্ছে। কৃষি থেকে রকট এই ডিজিটাল যুগে বদলে
+                যাচ্ছে জীবন
+                <br />
+                জীবিকা। এই ডিজিটাল যুগকে বলা হচ্ছে কম্পিউটারের স্বর্ণযুগ। এই
+                লক্ষ্যে আমরা কোম্পানীগঞ্জ উপজেলার প্রাণকেন্দ্র উপজেলা পরিষদের
+                সামনে ও কোম্পানীগঞ্জ থানার মাত্র ১০ গজ দক্ষিনে মামুন টাওয়ার এর
+                ৪র্থ তলায় কারিগরি শিক্ষা বোর্ড অনুমোদিত কোম্পানীগঞ্জের সর্ববৃহৎ
+                প্রযুক্তি নির্ভর, কারিগরি ও বৃত্তিমূলক শিক্ষা প্রসার করার জন্য
+                মা কম্পিউটার ট্রেনিং সেন্টার একটি সর্বাধুনিক মানসম্পন্ন শিক্ষা
+                প্রতিষ্ঠান গড়ে তুলেছি। শুধুমাত্র ব্যক্তিগত চাহিদা নয় বরং
+                জাতীয় বা আন্তর্জাতিক চাহিদানুযায়ী কম্পিউটার প্রযুক্তিতে
+                বিভিন্ন বিষয়ে প্রশিক্ষণের মাধ্যমে জনশক্তিকে আত্মবিশ্বাসী ও
+                নির্ভরশীল হিসেবে গড়ে তোলা * মা কম্পিউটার ট্রেনিং সেন্টার এর মূল
+                উদ্দেশ্যে৷
+              </div>
+            </div>
+            <div class="w-[205px] px-[22px] py-[8px] bg-[#186D6D] rounded flex justify-center items-center gap-[10px]">
+              <div class="w-[51px] h-[24px] text-white text-[16px] font-hind-siliguri font-medium">
+                বিস্তারিত
+              </div>
+            </div>
           </div>
 
-          {/* Card 2 */}
-          <div className="card  p-6 rounded-lg flex flex-col items-center text-center">
-            <div className="icon-container mb-4 text-4xl text-blue-600">
-              <FaArrowsAlt />
-            </div>{" "}
-            {/* Icon for Our Strategy */}
-            <h3 className="text-xl font-semibold mb-2">আমাদের স্ট্রাটেজি</h3>
-            <button className="border py-2 px-6 rounded hover:bg-gray-100">
-              বিস্তারিত
-            </button>
-          </div>
+          <div class="w-[372px] flex flex-col items-start gap-[24px]">
+            <div class="inline-flex items-center gap-[24px] w-full">
+              {/* <!-- Card 1 --> */}
+              <div class="w-[174px] p-2 bg-white rounded-[8px] shadow-md flex flex-col items-center gap-[8px]">
+                <div class="flex flex-col items-center gap-[4px]">
+                  <div class="p-[12px] bg-[#D6593F] shadow-lg rounded-[10px] outline outline-1 outline-white inline-flex items-center gap-[10px]">
+                    <div class="w-[24px] h-[24px] relative overflow-hidden">
+                      {/* <!-- Replace with icon --> */}
+                    </div>
+                  </div>
+                  <div class="text-black text-[16px] font-hind-siliguri font-medium">
+                    মিশন ও ভিশন
+                  </div>
+                </div>
+                <div class="w-full h-[33px] px-[12px] py-[6px] rounded-[4px] outline outline-1 outline-black flex justify-center items-center gap-[10px]">
+                  <div class="w-[51px] h-[24px] text-black text-[16px] font-hind-siliguri font-medium">
+                    বিস্তারিত
+                  </div>
+                </div>
+              </div>
 
-          {/* Card 3 */}
-          <div className="card  p-6 rounded-lg flex flex-col items-center text-center">
-            <div className="icon-container mb-4 text-4xl text-green-600">
-              <FaTrophy />
-            </div>{" "}
-            {/* Icon for Success Stories */}
-            <h3 className="text-xl font-semibold mb-2">সফলতার গল্প</h3>
-            <button className="border py-2 px-6 rounded hover:bg-gray-100">
-              বিস্তারিত
-            </button>
-          </div>
+              {/* <!-- Card 2 --> */}
+              <div class="w-[174px] p-2 bg-white rounded-[8px] shadow-md flex flex-col items-center gap-[8px]">
+                <div class="flex flex-col items-center gap-[4px]">
+                  <div class="p-[12px] bg-[#58D6FB] shadow-lg rounded-[10px] outline outline-1 outline-white inline-flex items-center gap-[10px]">
+                    <div class="w-[24px] h-[24px] relative">
+                      {/* <!-- Replace with icon --> */}
+                    </div>
+                  </div>
+                  <div class="text-black text-[16px] font-hind-siliguri font-medium">
+                    আমাদের স্ট্রাটেজি
+                  </div>
+                </div>
+                <div class="w-full h-[33px] px-[12px] py-[6px] rounded-[4px] outline outline-1 outline-black flex justify-center items-center gap-[10px]">
+                  <div class="w-[51px] h-[24px] text-black text-[16px] font-hind-siliguri font-medium">
+                    বিস্তারিত
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          {/* Card 4 */}
-          <div className="card  p-6 rounded-lg flex flex-col items-center text-center">
-            <div className="icon-container mb-4 text-4xl text-purple-600">
-              <FaHeart />
-            </div>{" "}
-            {/* Icon for Opportunities and Benefits */}
-            <h3 className="text-xl font-semibold mb-2">সুযোগ-সুবিধা সমূহ</h3>
-            <button className="border py-2 px-6 rounded hover:bg-gray-100">
-              বিস্তারিত
-            </button>
+            <div class="inline-flex items-center gap-[24px] w-full">
+              {/* <!-- Card 3 --> */}
+              <div class="w-[174px] p-2 bg-white rounded-[8px] shadow-md flex flex-col items-center gap-[8px]">
+                <div class="flex flex-col items-center gap-[4px]">
+                  <div class="p-[12px] bg-[#00ABA0] shadow-lg rounded-[10px] outline outline-1 outline-white inline-flex items-center gap-[10px]">
+                    <div class="w-[24px] h-[24px] relative">
+                      {/* <!-- Replace with icon --> */}
+                    </div>
+                  </div>
+                  <div class="text-black text-[16px] font-hind-siliguri font-medium">
+                    সফলতার গল্প
+                  </div>
+                </div>
+                <div class="w-full h-[33px] px-[12px] py-[6px] rounded-[4px] outline outline-1 outline-black flex justify-center items-center gap-[10px]">
+                  <div class="w-[51px] h-[24px] text-black text-[16px] font-hind-siliguri font-medium">
+                    বিস্তারিত
+                  </div>
+                </div>
+              </div>
+
+              {/* <!-- Card 4 --> */}
+              <div class="w-[174px] p-2 bg-white rounded-[8px] shadow-md flex flex-col items-center gap-[8px]">
+                <div class="flex flex-col items-center gap-[4px]">
+                  <div class="p-[12px] bg-[#8170FF] shadow-lg rounded-[10px] outline outline-1 outline-white inline-flex items-center gap-[10px]">
+                    <div class="w-[24px] h-[24px] relative">
+                      {/* <!-- Replace with icon --> */}
+                    </div>
+                  </div>
+                  <div class="text-black text-[16px] font-hind-siliguri font-medium">
+                    সুযোগ-সুবিধা সমুহ
+                  </div>
+                </div>
+                <div class="w-full h-[33px] px-[12px] py-[6px] rounded-[4px] outline outline-1 outline-black flex justify-center items-center gap-[10px]">
+                  <div class="w-[51px] h-[24px] text-black text-[16px] font-hind-siliguri font-medium">
+                    বিস্তারিত
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

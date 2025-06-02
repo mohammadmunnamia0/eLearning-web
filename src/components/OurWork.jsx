@@ -25,14 +25,17 @@ const OurWork = () => {
           )}
         </div>
       </div>
-      <div className="text-center mt-8">
-       
-        <Button
-        onClick={() => setShowAll(!showAll)}
-          className="px-6 py-2  text-white rounded-lg transition-colors"
+      <div></div>
+      <div className="text-center mt-[137px]">
+        <div
+          onClick={() => setShowAll(!showAll)}
+          className="w-80 px-6 py-3 bg-teal-700 rounded inline-flex justify-center items-center gap-2.5 cursor-pointer mx-auto"
         >
-           {showAll ? "Show Less" : "Show More"}
-        </Button>
+          <div className="justify-start text-white text-xl font-medium font-['Hind_Siliguri']">
+            {showAll ? "কম দেখুন" : "আরও দেখুন"}
+          </div>
+         
+        </div>
       </div>
     </section>
   );
