@@ -1,9 +1,8 @@
-import React from "react";
 import OurWork from "../OurWork";
 
 const PhotoGallery = () => {
   return (
-    <div className="photo-gallery">
+    <div className="ml-[130px] ">
      <OurWork></OurWork>
     </div>
   );
