@@ -9,17 +9,20 @@ const Navbar = () => {
       ? "bg-teal-700 text-white rounded-[12px] px-2 py-1"
       : "text-gray-800 hover:bg-teal-700 hover:text-white rounded-[12px] px-2 py-1";
   };
+  const navLinkStyle2 = ({ isActive }) => {
+    return isActive
+      ? "text-teal-800 rounded-[12px] px-2 py-1"
+      : "text-gray-800 rounded-[12px] px-2 py-1";
+  };
 
   return (
     <div>
       <div>
-        <p className="text-center text-[16px] font-nav p-4">
-          আমাদের কথা
-        </p>
+        <p className="text-center text-[16px] font-nav p-4">আমাদের কথা</p>
       </div>
       <div className="bg-sky-100">
-        <div className="py-[10px] px-[82px]">
-          <div className="navbar bg-white rounded-xl ">
+        <div className="py-[10px] px-4 md:px-[82px]">
+          <div className="navbar bg-white rounded-xl">
             <div className="navbar-start">
               <div className="dropdown">
                 <div
@@ -44,42 +47,63 @@ const Navbar = () => {
                 </div>
                 <ul
                   tabIndex={0}
-                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow grid gap-4"
+                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-4 shadow grid gap-4"
                 >
                   <NavLink to="/" className={navLinkStyle}>
-                    <a>Home</a>
+                    <a>হোম</a>
                   </NavLink>
                   <NavLink to="/course" className={navLinkStyle}>
-                    <a>Course</a>
+                    <a>কোর্স</a>
                   </NavLink>
                   <NavLink to="/training" className={navLinkStyle}>
-                    <a>Training</a>
+                    <a>প্রশিক্ষক</a>
                   </NavLink>
                   <NavLink to="/games" className={navLinkStyle}>
-                    <a>Games</a>
+                    <a>গেমস</a>
                   </NavLink>
-                  <NavLink to="/gallery" className={navLinkStyle}>
-                    <a>Gallery</a>
-                  </NavLink>
+                  <div className="dropdown dropdown-hover">
+                    <label
+                      tabIndex={0}
+                      className="flex items-center gap-1 cursor-pointer px-2 py-1 hover:bg-green-200 rounded-[12px]"
+                    >
+                      গ্যালারী
+                      <RiArrowDropDownLine />
+                    </label>
+                    <ul
+                      tabIndex={0}
+                      className="menu menu-sm dropdown-content text-black rounded-box shadow mt-3 z-[1] w-36 bg-white p-2"
+                    >
+                      <li>
+                        <NavLink className={navLinkStyle2} to="/photoGallery">
+                          ফটো গ্যালারী
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink className={navLinkStyle2} to="/videoGallery">
+                          ভিডিও গ্যালারী
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </div>
                   <NavLink to="/blog" className={navLinkStyle}>
-                    <a>Blog</a>
+                    <a>ব্লগ</a>
                   </NavLink>
                   <NavLink to="/contact" className={navLinkStyle}>
-                    <a>Contact</a>
+                    <a>যোগাযোগ</a>
                   </NavLink>
                 </ul>
               </div>
-              <NavLink to="/" className="btn btn-ghost ">
+              <NavLink to="/" className="btn btn-ghost text-lg md:text-xl">
                 Amader Shikkha
               </NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
-              <ul className="menu menu-horizontal px-1 flex gap-8 font-nav">
-                <NavLink  to="/" className={navLinkStyle}>
+              <ul className="menu menu-horizontal px-1 flex gap-4 xl:gap-8 font-nav">
+                <NavLink to="/" className={navLinkStyle}>
                   হোম
                 </NavLink>
                 <NavLink to="/course" className={navLinkStyle}>
-                  কোর্স 
+                  কোর্স
                 </NavLink>
                 <NavLink to="/training" className={navLinkStyle}>
                   প্রশিক্ষক
@@ -91,22 +115,22 @@ const Navbar = () => {
                 <div className="dropdown dropdown-hover">
                   <label
                     tabIndex={0}
-                    className="flex items-center gap-1 cursor-pointer px-2 py-1 hover:bg-green-100 rounded-[12px]"
+                    className="flex items-center gap-1 cursor-pointer px-2 py-1 hover:bg-green-200 rounded-[12px]"
                   >
                     গ্যালারী
                     <RiArrowDropDownLine />
                   </label>
                   <ul
                     tabIndex={0}
-                    className="menu menu-sm dropdown-content bg-base-100 text-black rounded-box shadow mt-3 z-[1] w-48"
+                    className="menu menu-sm dropdown-content text-black rounded-box shadow mt-3 z-[1] w-36 bg-white p-2"
                   >
                     <li>
-                      <NavLink className={navLinkStyle} to="/photoGallery">
+                      <NavLink className={navLinkStyle2} to="/photoGallery">
                         ফটো গ্যালারী
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink className={navLinkStyle} to="/videoGallery">
+                      <NavLink className={navLinkStyle2} to="/videoGallery">
                         ভিডিও গ্যালারী
                       </NavLink>
                     </li>
@@ -121,9 +145,11 @@ const Navbar = () => {
                 </NavLink>
               </ul>
             </div>
-            <div className="navbar-end ">
+            <div className="navbar-end">
               <NavLink to="/login">
-                <Button className="rounded-[12px]">লগইন</Button>
+                <Button className="rounded-[12px] text-sm md:text-base">
+                  লগইন
+                </Button>
               </NavLink>
             </div>
           </div>

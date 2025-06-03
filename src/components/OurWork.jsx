@@ -8,63 +8,77 @@ const OurWork = () => {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <section className="grid items-center mt-[100px]">
-      <div className={`relative ${showAll ? "h-[1600px]" : "h-[815px]"}`}>
-        <div className="left-[480px] top-[27px] absolute text-center justify-start text-black text-3xl font-semibold font-['Hind_Siliguri']">
+    <section className="grid items-center mt-[100px] px-4 md:px-6">
+      <div
+        className={`relative ${
+          showAll ? "h-[1600px]" : "h-[815px]"
+        } max-w-[1200px] mx-auto w-full`}
+      >
+        <div className="text-center text-black text-2xl md:text-3xl font-semibold font-['Hind_Siliguri'] mb-8 md:mb-0 md:absolute md:left-[480px] md:top-[27px]">
           আমাদের কার্যক্রম সমূহ
         </div>
 
-        <img
-          className="w-[452px] h-52 left-[131px] top-[139px] absolute rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
-          src={image1}
-          alt=""
-        />
-        <img
-          className="w-[452px] h-52 left-[131px] top-[423px] absolute rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
-          src={image2}
-          alt=""
-        />
-        <img
-          className="w-[452px] h-52 left-[619px] top-[98px] absolute rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
-          src={image3}
-          alt=""
-        />
-        <img
-          className="w-[452px] h-52 left-[619px] top-[382px] absolute rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
-          src={image4}
-          alt=""
-        />
-
-        {showAll && (
-          <>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-0 md:absolute md:left-0 md:right-0">
+          <div className="space-y-6 md:space-y-0">
             <img
-              className="w-[452px] h-52 left-[131px] top-[707px] absolute rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
+              className="w-full md:w-[452px] h-52 object-cover md:absolute md:left-[131px] md:top-[139px] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
               src={image1}
               alt=""
             />
             <img
-              className="w-[452px] h-52 left-[131px] top-[991px] absolute rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
+              className="w-full md:w-[452px] h-52 object-cover md:absolute md:left-[131px] md:top-[423px] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
               src={image2}
               alt=""
             />
+            {showAll && (
+              <>
+                <img
+                  className="w-full md:w-[452px] h-52 object-cover md:absolute md:left-[131px] md:top-[707px] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
+                  src={image1}
+                  alt=""
+                />
+                <img
+                  className="w-full md:w-[452px] h-52 object-cover md:absolute md:left-[131px] md:top-[991px] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
+                  src={image2}
+                  alt=""
+                />
+              </>
+            )}
+          </div>
+
+          <div className="space-y-6 md:space-y-0">
             <img
-              className="w-[452px] h-52 left-[619px] top-[666px] absolute rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
+              className="w-full md:w-[452px] h-52 object-cover md:absolute md:left-[619px] md:top-[98px] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
               src={image3}
               alt=""
             />
             <img
-              className="w-[452px] h-52 left-[619px] top-[950px] absolute rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
+              className="w-full md:w-[452px] h-52 object-cover md:absolute md:left-[619px] md:top-[382px] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
               src={image4}
               alt=""
             />
-          </>
-        )}
+            {showAll && (
+              <>
+                <img
+                  className="w-full md:w-[452px] h-52 object-cover md:absolute md:left-[619px] md:top-[666px] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
+                  src={image3}
+                  alt=""
+                />
+                <img
+                  className="w-full md:w-[452px] h-52 object-cover md:absolute md:left-[619px] md:top-[950px] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
+                  src={image4}
+                  alt=""
+                />
+              </>
+            )}
+          </div>
+        </div>
 
         <div
           onClick={() => setShowAll(!showAll)}
-          className={`w-80 px-6 py-3 left-[467px] absolute bg-teal-700 rounded inline-flex justify-center items-center gap-2.5 cursor-pointer ${
-            showAll ? "top-[1300px]" : "top-[725px]"
-          }`}
+          className={`w-full md:w-80 px-6 py-3 mt-6 md:mt-0 md:absolute bg-teal-700 rounded inline-flex justify-center items-center gap-2.5 cursor-pointer ${
+            showAll ? "md:top-[1300px]" : "md:top-[725px]"
+          } md:left-[467px]`}
         >
           <div className="justify-start text-white text-xl font-medium font-['Hind_Siliguri']">
             {showAll ? "কম দেখুন" : "আরও দেখুন"}

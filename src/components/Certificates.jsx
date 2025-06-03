@@ -27,21 +27,21 @@ const Certificates = () => {
   ];
 
   return (
-    <section className="mt-[140px] flex justify-center">
-      <div className="w-[1440px] h-80 relative">
-        <div className="flex flex-col items-center mb-12">
-          <div className="text-center text-black text-3xl font-semibold font-['Hind_Siliguri']">
+    <section className="mt-[140px] px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto">
+        <div className="flex flex-col items-center mb-8 sm:mb-12">
+          <div className="text-center text-black text-2xl sm:text-3xl font-semibold font-['Hind_Siliguri']">
             অনুমোদন সমূহ
           </div>
-          <div className="text-center text-black text-lg font-normal font-['Hind_Siliguri']">
+          <div className="text-center text-black text-base sm:text-lg font-normal font-['Hind_Siliguri'] mt-2">
             আমাদের শিক্ষা কম্পিউটার ট্রেনিং সেন্টার এর সরকারি অনুমোদন সমূহ
           </div>
         </div>
-        <div className="flex justify-center items-center gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="inline-flex flex-col justify-center items-start gap-0.5"
+              className="inline-flex flex-col justify-center items-start gap-0.5 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <div className="inline-flex justify-start items-center gap-2">
                 <img
@@ -53,7 +53,7 @@ const Certificates = () => {
                   {card.title}
                 </div>
               </div>
-              <div className="self-stretch flex flex-col justify-start items-start gap-1">
+              <div className="self-stretch flex flex-col justify-start items-start gap-1 mt-2">
                 <div className="justify-start text-black text-sm font-medium font-['Hind_Siliguri']">
                   {card.description}
                 </div>

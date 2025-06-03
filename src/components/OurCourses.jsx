@@ -1,75 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-const cardsDetails = [
-  {
-    id: 1,
-    title: "১৫+ কোর্স",
-    validity: "2 month",
-    rating: "***",
-    CourseFee: "কম্পিউটার শিক্ষা, দক্ষতা উন্নয়ন ও পেশাগত প্রশিক্ষণ",
-    instructorName: "রাশেদুল ইসলাম",
-    instructorTitle: "প্রশিক্ষক",
-    price: 1500,
-    reviewCount: 320,
-  },
-  {
-    id: 2,
-    title: "দক্ষ ও অভিজ্ঞ প্রশিক্ষক",
-    validity: "2 month",
-    rating: "***",
-    CourseFee:
-      "জ্ঞানী, অভিজ, সহায়ক,উদ্যমী, প্রেরণাদায়ক এবং শিক্ষার্থী-কেন্দ্রিক",
-    instructorName: "রাশেদুল ইসলাম",
-    instructorTitle: "প্রশিক্ষক",
-    price: 1500,
-    reviewCount: 450,
-  },
-  {
-    id: 3,
-    title: "প্রফেশনাল ক্যারিয়ার",
-    validity: "2 month",
-    rating: "***",
-    CourseFee: "দক্ষতা, অভিজ্ঞতা, জ্ঞান, উন্নতি, সাফল্য, বৃদ্ধি সুযোগ",
-    instructorName: "রাশেদুল ইসলাম",
-    instructorTitle: "প্রশিক্ষক",
-    price: 1500,
-    reviewCount: 500,
-  },
-  {
-    id: 4,
-    title: "লাইভ ক্লাস",
-    validity: "2 month",
-    rating: "***",
-    CourseFee: "ইন্টারেক্টিভ লাইভ সেশন, প্রশ্ন-উত্তর পর্ব ও রেকর্ডেড ক্লাস",
-    instructorName: "রাশেদুল ইসলাম",
-    instructorTitle: "প্রশিক্ষক",
-    price: 1500,
-    reviewCount: 250,
-  },
-  {
-    id: 5,
-    title: "সার্টিফিকেট কোর্স",
-    validity: "2 month",
-    rating: "***",
-    CourseFee: "প্রত্যয়নযোগ্য কোর্স সম্পন্ন করে সার্টিফিকেট অর্জন",
-    instructorName: "রাশেদুল ইসলাম",
-    instructorTitle: "প্রশিক্ষক",
-    price: 1500,
-    reviewCount: 320,
-  },
-  {
-    id: 6,
-    title: "জব রেডিনেস ট্রেইনিং",
-    validity: "2 month",
-    rating: "***",
-    CourseFee: "সফল ক্যারিয়ারের জন্য ইন্ডাস্ট্রি-ফোকাসড প্রশিক্ষণ",
-    instructorName: "রাশেদুল ইসলাম",
-    instructorTitle: "প্রশিক্ষক",
-    price: 1500,
-    reviewCount: 450,
-  },
-];
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { courses } from "../data/courses";
 
 const CourseCard = ({ card }) => {
   const navigate = useNavigate();
@@ -79,34 +10,36 @@ const CourseCard = ({ card }) => {
   };
 
   return (
-    <div className="flex-shrink-0 w-[303px] mx-2 bg-white rounded-[16px] shadow-[1px_2px_12px_rgba(0,0,0,0.12)]">
-      <div className="h-[231px] w-full bg-[#DADBDE] rounded-t-[16px] flex items-center justify-center text-gray-500 text-xl font-semibold">
+    <div className="flex-shrink-0 w-[280px] sm:w-[303px] mx-2 bg-white rounded-[16px] shadow-[1px_2px_12px_rgba(0,0,0,0.12)] flex flex-col">
+      <div className="h-[200px] sm:h-[231px] w-full bg-[#DADBDE] rounded-t-[16px] flex items-center justify-center text-gray-500 text-lg sm:text-xl font-semibold">
         Image
       </div>
-      <div className="flex flex-col items-center justify-center gap-4 p-4 w-full">
-        <div className="flex flex-col items-start justify-start gap-3 w-full">
-          <div className="flex flex-col items-start justify-start gap-2 w-full">
-            <div className="text-black text-[20px] leading-6 font-semibold font-[Hind_Siliguri]">
+      <div className="flex flex-col items-start justify-start gap-3 sm:gap-4 p-3 sm:p-4 w-full flex-grow">
+        <div className="flex flex-col items-start justify-start gap-2 sm:gap-3 w-full">
+          <div className="flex flex-col items-start justify-start gap-1 sm:gap-2 w-full">
+            <div className="text-black text-[18px] sm:text-[20px] leading-6 font-semibold">
               {card.title}
             </div>
             <div>
-              <span className="text-[#96A0B0] text-[16px] font-normal font-[Hind_Siliguri]">
-                মেয়াদ:{" "}
+              <span className="text-[#96A0B0] text-[14px] sm:text-[16px] font-normal">
+                মেয়াদ:{" "}
               </span>
-              <span className="text-[#96A0B0] text-[16px] font-normal font-[Inter]">
+              <span className="text-[#96A0B0] text-[14px] sm:text-[16px] font-normal font-[Inter]">
                 {card.validity}
               </span>
             </div>
           </div>
-          <div className="text-black text-[14px] font-medium font-[Hind_Siliguri]">
+          <div className="text-black text-[13px] sm:text-[14px] font-medium line-clamp-2">
             {card.CourseFee}
           </div>
         </div>
+      </div>
+      <div className="p-3 sm:p-4 pt-0 sm:pt-0 w-full">
         <button
           onClick={handleDetailsClick}
-          className="inline-flex items-center justify-center gap-[10px] bg-[#186D6D] rounded px-[22px] py-[8px] w-[205px]"
+          className="inline-flex items-center justify-center gap-[10px] bg-[#186D6D] rounded px-[18px] sm:px-[22px] py-[6px] sm:py-[8px] w-full"
         >
-          <div className="text-white text-[16px] font-medium font-[Hind_Siliguri] leading-[24px]">
+          <div className="text-white text-[14px] sm:text-[16px] font-medium leading-[24px]">
             বিস্তারিত
           </div>
         </button>
@@ -124,7 +57,7 @@ const OurCourses = () => {
     if (isAnimating) return;
     setIsAnimating(true);
     setCurrentIndex((prev) =>
-      prev + visibleCards >= cardsDetails.length ? 0 : prev + 1
+      prev + visibleCards >= courses.length ? 0 : prev + 1
     );
   };
 
@@ -132,7 +65,7 @@ const OurCourses = () => {
     if (isAnimating) return;
     setIsAnimating(true);
     setCurrentIndex((prev) =>
-      prev - 1 < 0 ? Math.max(cardsDetails.length - visibleCards, 0) : prev - 1
+      prev - 1 < 0 ? Math.max(courses.length - visibleCards, 0) : prev - 1
     );
   };
 
@@ -145,37 +78,65 @@ const OurCourses = () => {
 
   return (
     <div className="w-full px-4 py-8 mt-[222px]">
-      <h2 className="text-center text-black text-[32px] font-[Hind_Siliguri] font-semibold mb-6">
+      <h2 className="text-center text-black text-[32px] font-semibold mb-6">
         আমাদের কোর্স সমূহ
       </h2>
-      <div className="flex justify-between mb-4">
-        <button
-          onClick={handlePrev}
-          className="bg-[#186D6D] text-white px-4 py-2 rounded"
-        >
-          Prev
-        </button>
-        <button
-          onClick={handleNext}
-          className="bg-[#186D6D] text-white px-4 py-2 rounded"
-        >
-          Next
-        </button>
-      </div>
-      <div className="overflow-hidden">
-        <div
-          className="flex transition-transform duration-300 ease-in-out"
-          style={{ transform: `translateX(${translateX})` }}
-        >
-          {cardsDetails.map((card, index) => (
-            <CourseCard key={index} card={card} />
-          ))}
+      <div className="relative w-full">
+        <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2 lg:px-16 z-20">
+          <button
+            onClick={handlePrev}
+            className="bg-[#186D6D] text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#145757] transition-colors shadow-lg -ml-2 lg:-ml-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={handleNext}
+            className="bg-[#186D6D] text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#145757] transition-colors shadow-lg -mr-2 lg:-mr-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div className="overflow-hidden relative z-10">
+          <div
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(${translateX})` }}
+          >
+            {courses.map((card, index) => (
+              <CourseCard key={index} card={card} />
+            ))}
+          </div>
         </div>
       </div>
       <div className="flex justify-center mt-[98px]">
         <div className="w-[306px] px-6 py-3 bg-[#186D6D] rounded flex items-center justify-center gap-2 inline-flex">
-          <div className="text-white text-[20px] font-[Hind_Siliguri] font-medium">
-            আরও দেখুন
+          <div className="text-white text-[20px] font-medium">
+            <Link to="/course">আরও দেখুন</Link>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 const containerClass =
-  "w-full px-4 md:px-20 pt-10 pb-6 bg-teal-700 rounded-tl-3xl rounded-tr-3xl inline-flex flex-col justify-start items-start gap-6";
-const mainFlexClass =
-  "self-stretch inline-flex justify-start items-start gap-28";
+  "w-full px-4 md:px-8 lg:px-20 pt-10 pb-6 bg-teal-700 rounded-tl-3xl rounded-tr-3xl flex flex-col gap-6";
+const mainGridClass =
+  "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12";
 const sectionTitleClass =
   "justify-start text-white text-base font-semibold font-['Hind_Siliguri']";
 const sectionItemClass =
@@ -14,14 +14,14 @@ const followTitleClass =
   "justify-start text-white text-lg font-bold font-['Hind_Siliguri'] leading-relaxed";
 const hrClass =
   "self-stretch h-0 outline outline-1 outline-offset-[-0.50px] outline-neutral-400";
-const footerTextClass = "text-white text-lg font-normal";
+const footerTextClass = "text-white text-base md:text-lg font-normal";
 
 export default function Footer() {
   return (
     <div className={containerClass}>
-      <div className={mainFlexClass}>
+      <div className={mainGridClass}>
         {/* Logo & Description */}
-        <div className="w-72 inline-flex flex-col justify-start items-start gap-3">
+        <div className="flex flex-col gap-3">
           <div className="inline-flex justify-start items-center gap-1.5">
             <img
               className="w-11 h-7"
@@ -32,21 +32,21 @@ export default function Footer() {
               Amader Shikkha
             </div>
           </div>
-          <div className="self-stretch justify-start text-white text-lg font-normal font-['Hind_Siliguri']">
+          <div className="justify-start text-white text-lg font-normal font-['Hind_Siliguri']">
             সর্ববৃহৎ প্রযুক্তি নির্ভর, কারিগরি ও বৃত্তিমূলক শিক্ষা
           </div>
         </div>
 
         {/* Navigation Links */}
-        <div className="flex-1 flex justify-start items-start gap-12">
-          <div className="inline-flex flex-col justify-start items-start gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
+          <div className="flex flex-col gap-3">
             <div className={sectionTitleClass}>আমাদের সম্পর্কে</div>
             <div className={sectionItemClass}>আমাদের কথা</div>
             <div className={sectionItemClass}>সাহায্য</div>
             <div className={sectionItemClass}>প্রশ্ন</div>
             <div className={sectionItemClass}>যোগাযোগ</div>
           </div>
-          <div className="inline-flex flex-col justify-start items-start gap-3">
+          <div className="flex flex-col gap-3">
             <div className={sectionTitleClass}>গুরত্বপূর্ণ লিংক</div>
             <div className={sectionItemClass}>শিক্ষা বোর্ডের ফলাফল</div>
             <div className={sectionItemClass}>এনআইডি আবেদন সিস্টেম</div>
@@ -58,18 +58,19 @@ export default function Footer() {
               বাংলাদেশ কারিগরি শিক্ষা বোর্ড
             </div>
           </div>
-          <div className="inline-flex flex-col justify-start items-start gap-3">
-            <div className={sectionTitleClass}>গুরত্বপূর্ণ মেনু</div>
-            <div className={sectionItemClass}>কোর্স</div>
-            <div className={sectionItemClass}>নিউজ</div>
-            <div className={sectionItemClass}>এডমিশন</div>
-            <div className={sectionItemClass}>ভেরিফিকেশন</div>
-          </div>
+        </div>
+
+        <div className="flex flex-col gap-3">
+          <div className={sectionTitleClass}>গুরত্বপূর্ণ মেনু</div>
+          <div className={sectionItemClass}>কোর্স</div>
+          <div className={sectionItemClass}>নিউজ</div>
+          <div className={sectionItemClass}>এডমিশন</div>
+          <div className={sectionItemClass}>ভেরিফিকেশন</div>
         </div>
 
         {/* Contact Info & Follow */}
-        <div className="inline-flex flex-col justify-start items-end gap-6">
-          <div className="flex flex-col justify-center items-start gap-1">
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-1">
             <div className={contactTitleClass}>যোগাযোগ</div>
             <div className={contactItemClass}>
               মোবাইল: 01888666619, 01864776487
@@ -79,9 +80,9 @@ export default function Footer() {
             </div>
             <div className={contactItemClass}>ঠিকানা: Bashundhara, Dhaka</div>
           </div>
-          <div className="flex flex-col justify-start items-center gap-3">
+          <div className="flex flex-col gap-3">
             <div className={followTitleClass}>ফলো করুন</div>
-            <div className="w-40 inline-flex justify-start items-start gap-8 flex-wrap content-start">
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-4">
               {/* Social icons placeholders */}
               <div className="w-8 h-8 relative">
                 <div className="w-8 h-8 left-0 top-0 absolute bg-blue-600 rounded-[50px]" />
@@ -118,10 +119,10 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="self-stretch flex flex-col justify-start items-center gap-6">
+      <div className="flex flex-col gap-6">
         <div className={hrClass}></div>
-        <div className="self-stretch px-96 flex flex-col justify-start items-start">
-          <div className="w-[514.27px] text-center justify-start">
+        <div className="grid grid-cols-1 gap-2 text-center">
+          <div>
             <span className={`${footerTextClass} font-['Poppins']`}>
               © 2025 amadershikka.{" "}
             </span>
@@ -130,9 +131,7 @@ export default function Footer() {
             </span>
             <span className={`${footerTextClass} font-['Poppins']`}>.</span>
           </div>
-          <div
-            className={`w-[514.27px] text-center justify-start ${footerTextClass} font-['Hind_Siliguri']`}
-          >
+          <div className={`${footerTextClass} font-['Hind_Siliguri']`}>
             প্রযুক্তিক সহযোগিতায়: GenzSoft.Cloud
           </div>
         </div>
