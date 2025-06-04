@@ -48,11 +48,11 @@ const Hero = () => {
                   <span className="text-black text-base font-semibold font-['Noto_Sans_Bengali']">
                     ১৫
                   </span>
-                  <span className="text-black text-base font-semibold font-['Hind_Siliguri']">
+                  <span className="text-black text-base font-semibold  ">
                     + কোর্স
                   </span>
                 </div>
-                <div className="w-full sm:w-[190px] text-black text-sm font-medium font-['Hind_Siliguri'] break-words">
+                <div className="w-full sm:w-[190px] text-black text-sm font-medium   break-words">
                   কম্পিউটার শিক্ষা, দক্ষতা উন্নয়ন ও পেশাগত প্রশিক্ষণ
                 </div>
               </div>
@@ -68,7 +68,7 @@ const Hero = () => {
                     প্রফেশনাল ক্যারিয়ার
                   </span>
                 </div>
-                <div className="w-full sm:w-[190px] text-black text-sm font-medium font-['Hind_Siliguri'] break-words">
+                <div className="w-full sm:w-[190px] text-black text-sm font-medium   break-words">
                   দক্ষতা, অভিজ্ঞতা, জ্ঞান, উন্নতি, সাফল্য, বৃদ্ধি সুযোগ
                 </div>
               </div>
@@ -84,7 +84,7 @@ const Hero = () => {
                     দক্ষ ও অভিজ্ঞ প্রশিক্ষক
                   </span>
                 </div>
-                <div className="w-full sm:w-[190px] text-black text-sm font-medium font-['Hind_Siliguri'] break-words">
+                <div className="w-full sm:w-[190px] text-black text-sm font-medium   break-words">
                   জ্ঞানী, অভিজ, সহায়ক,উদ্যমী, প্রেরণাদায়ক এবং
                   শিক্ষার্থী-কেন্দ্রিক
                 </div>

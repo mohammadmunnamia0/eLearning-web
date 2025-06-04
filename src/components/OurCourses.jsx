@@ -85,7 +85,7 @@ const OurCourses = () => {
         <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2 lg:px-16 z-20">
           <button
             onClick={handlePrev}
-            className="bg-[#186D6D] text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#145757] transition-colors shadow-lg -ml-2 lg:-ml-4"
+            className="bg-[#186D6D] absolute left-[calc(50%-197px)]  lg:left-[calc(50%-650px)] text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#145757] transition-colors shadow-lg -ml-2 lg:-ml-4"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@ const OurCourses = () => {
           </button>
           <button
             onClick={handleNext}
-            className="bg-[#186D6D] text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#145757] transition-colors shadow-lg -mr-2 lg:-mr-4"
+            className="bg-[#186D6D] absolute right-[calc(50%-197px)]  lg:right-[calc(50%-650px)]  text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#145757] transition-colors shadow-lg -mr-2 lg:-mr-4"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

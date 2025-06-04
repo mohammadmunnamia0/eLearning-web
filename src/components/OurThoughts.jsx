@@ -1,4 +1,55 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 const OurThoughts = () => {
+  const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState({
+    title: "",
+    points: [],
+  });
+
+  const modalContents = {
+    mission: {
+      title: "মিশন ও ভিশন",
+      points: [
+        "কারিগরি শিক্ষার মাধ্যমে দক্ষ জনশক্তি তৈরি করা",
+        "প্রযুক্তি নির্ভর শিক্ষা প্রসার করা",
+        "জাতীয় ও আন্তর্জাতিক চাহিদা অনুযায়ী প্রশিক্ষণ প্রদান করা",
+      ],
+    },
+    strategy: {
+      title: "আমাদের স্ট্রাটেজি",
+      points: [
+        "আধুনিক প্রযুক্তি ব্যবহার করে শিক্ষা প্রদান",
+        "হাতে-কলমে প্রশিক্ষণের সুযোগ",
+        "বাস্তব জীবনের সমস্যা সমাধানের দক্ষতা অর্জন",
+      ],
+    },
+    facilities: {
+      title: "সুযোগ-সুবিধা সমুহ",
+      points: [
+        "আধুনিক কম্পিউটার ল্যাব",
+        "অভিজ্ঞ প্রশিক্ষক",
+        "প্রশিক্ষণ শেষে সার্টিফিকেট প্রদান",
+        "জব প্লেসমেন্ট সহায়তা",
+      ],
+    },
+  };
+
+  const handleModalOpen = (type) => {
+    if (type === "success") {
+      navigate("/success-stories");
+      return;
+    }
+    setModalContent(modalContents[type]);
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section className="mt-[80px] md:mt-[120px] lg:mt-[147px]">
       <div className="max-w-[1440px] mx-auto px-4">
@@ -46,11 +97,14 @@ const OurThoughts = () => {
                     মিশন ও ভিশন
                   </div>
                 </div>
-                <div className="w-full h-[33px] px-[12px] py-[6px] rounded-[4px] outline outline-1 outline-black flex justify-center items-center gap-[10px]">
+                <button
+                  onClick={() => handleModalOpen("mission")}
+                  className="w-full h-[33px] px-[12px] py-[6px] rounded-[4px] outline outline-1 outline-black flex justify-center items-center gap-[10px] hover:bg-gray-50"
+                >
                   <div className="text-black text-[14px] md:text-[16px] font-hind-siliguri font-medium">
                     বিস্তারিত
                   </div>
-                </div>
+                </button>
               </div>
 
               {/* <!-- Card 2 --> */}
@@ -65,11 +119,14 @@ const OurThoughts = () => {
                     আমাদের স্ট্রাটেজি
                   </div>
                 </div>
-                <div className="w-full h-[33px] px-[12px] py-[6px] rounded-[4px] outline outline-1 outline-black flex justify-center items-center gap-[10px]">
+                <button
+                  onClick={() => handleModalOpen("strategy")}
+                  className="w-full h-[33px] px-[12px] py-[6px] rounded-[4px] outline outline-1 outline-black flex justify-center items-center gap-[10px] hover:bg-gray-50"
+                >
                   <div className="text-black text-[14px] md:text-[16px] font-hind-siliguri font-medium">
                     বিস্তারিত
                   </div>
-                </div>
+                </button>
               </div>
             </div>
 
@@ -86,11 +143,14 @@ const OurThoughts = () => {
                     সফলতার গল্প
                   </div>
                 </div>
-                <div className="w-full h-[33px] px-[12px] py-[6px] rounded-[4px] outline outline-1 outline-black flex justify-center items-center gap-[10px]">
+                <button
+                  onClick={() => handleModalOpen("success")}
+                  className="w-full h-[33px] px-[12px] py-[6px] rounded-[4px] outline outline-1 outline-black flex justify-center items-center gap-[10px] hover:bg-gray-50"
+                >
                   <div className="text-black text-[14px] md:text-[16px] font-hind-siliguri font-medium">
                     বিস্তারিত
                   </div>
-                </div>
+                </button>
               </div>
 
               {/* <!-- Card 4 --> */}
@@ -105,16 +165,61 @@ const OurThoughts = () => {
                     সুযোগ-সুবিধা সমুহ
                   </div>
                 </div>
-                <div className="w-full h-[33px] px-[12px] py-[6px] rounded-[4px] outline outline-1 outline-black flex justify-center items-center gap-[10px]">
+                <button
+                  onClick={() => handleModalOpen("facilities")}
+                  className="w-full h-[33px] px-[12px] py-[6px] rounded-[4px] outline outline-1 outline-black flex justify-center items-center gap-[10px] hover:bg-gray-50"
+                >
                   <div className="text-black text-[14px] md:text-[16px] font-hind-siliguri font-medium">
                     বিস্তারিত
                   </div>
-                </div>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+          <div className="bg-white rounded-lg p-6 max-w-lg w-full mx-4">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-semibold font-hind-siliguri">
+                {modalContent.title}
+              </h2>
+              <button
+                onClick={handleModalClose}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <ul className="space-y-2">
+              {modalContent.points.map((point, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="text-[#186D6D]">•</span>
+                  <span className="text-gray-700 font-hind-siliguri">
+                    {point}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

@@ -2,16 +2,14 @@ const containerClass =
   "w-full px-4 md:px-8 lg:px-20 pt-10 pb-6 bg-teal-700 rounded-tl-3xl rounded-tr-3xl flex flex-col gap-6";
 const mainGridClass =
   "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12";
-const sectionTitleClass =
-  "justify-start text-white text-base font-semibold font-['Hind_Siliguri']";
-const sectionItemClass =
-  "justify-start text-white text-base font-normal font-['Hind_Siliguri']";
+const sectionTitleClass = "justify-start text-white text-base font-semibold  ";
+const sectionItemClass = "justify-start text-white text-base font-normal  ";
 const contactTitleClass =
-  "self-stretch justify-start text-white text-lg font-semibold font-['Hind_Siliguri'] leading-relaxed";
+  "self-stretch justify-start text-white text-lg font-semibold   leading-relaxed";
 const contactItemClass =
-  "self-stretch justify-start text-white text-lg font-medium font-['Hind_Siliguri'] leading-relaxed";
+  "self-stretch justify-start text-white text-lg font-medium   leading-relaxed";
 const followTitleClass =
-  "justify-start text-white text-lg font-bold font-['Hind_Siliguri'] leading-relaxed";
+  "justify-start text-white text-lg font-bold   leading-relaxed";
 const hrClass =
   "self-stretch h-0 outline outline-1 outline-offset-[-0.50px] outline-neutral-400";
 const footerTextClass = "text-white text-base md:text-lg font-normal";
@@ -32,7 +30,7 @@ export default function Footer() {
               Amader Shikkha
             </div>
           </div>
-          <div className="justify-start text-white text-lg font-normal font-['Hind_Siliguri']">
+          <div className="justify-start text-white text-lg font-normal  ">
             সর্ববৃহৎ প্রযুক্তি নির্ভর, কারিগরি ও বৃত্তিমূলক শিক্ষা
           </div>
         </div>
@@ -126,12 +124,10 @@ export default function Footer() {
             <span className={`${footerTextClass} font-['Poppins']`}>
               © 2025 amadershikka.{" "}
             </span>
-            <span className={`${footerTextClass} font-['Hind_Siliguri']`}>
-              স্বর্বসত্ব সংরক্ষিত
-            </span>
+            <span className={`${footerTextClass}  `}>স্বর্বসত্ব সংরক্ষিত</span>
             <span className={`${footerTextClass} font-['Poppins']`}>.</span>
           </div>
-          <div className={`${footerTextClass} font-['Hind_Siliguri']`}>
+          <div className={`${footerTextClass}  `}>
             প্রযুক্তিক সহযোগিতায়: GenzSoft.Cloud
           </div>
         </div>

@@ -15,7 +15,7 @@ const Review = () => {
               ))}
             </div>
             {/* Text */}
-            <p className="text-zinc-900 text-sm font-normal font-['Hind_Siliguri'] leading-snug">
+            <p className="text-zinc-900 text-sm font-normal   leading-snug">
               আমার জন্য এটি একটি অসাধারণ অভিজ্ঞতা ছিল৷ পাঠ্যক্রম খুবই উপযোগী এবং
               হাতে-কলমে প্রশিক্ষণের সুযোগ পেয়েছি।
             </p>
@@ -25,10 +25,8 @@ const Review = () => {
                 স
               </div>
               <div className="flex flex-col justify-start items-start gap-0.5">
-                <p className="text-zinc-900 text-sm font-bold font-['Hind_Siliguri']">
-                  শেখ সাদি
-                </p>
-                <p className="text-zinc-600 text-xs font-normal font-['Hind_Siliguri']">
+                <p className="text-zinc-900 text-sm font-bold  ">শেখ সাদি</p>
+                <p className="text-zinc-600 text-xs font-normal  ">
                   ৫ম ব্যাচের শিক্ষার্থী
                 </p>
               </div>
@@ -46,7 +44,7 @@ const Review = () => {
               ))}
             </div>
             {/* Text */}
-            <p className="text-zinc-900 text-sm font-normal font-['Hind_Siliguri'] leading-snug">
+            <p className="text-zinc-900 text-sm font-normal   leading-snug">
               প্রশিক্ষণের সামগ্রিক মান অত্যন্ত ভালো। প্রযুক্তি এবং উপকরণ ব্যবহার
               করে শেখানো হয়েছ যা আমাদের কাজে লাগে।
             </p>
@@ -56,10 +54,10 @@ const Review = () => {
                 ফ
               </div>
               <div className="flex flex-col justify-start items-start gap-0.5">
-                <p className="text-zinc-900 text-sm font-bold font-['Hind_Siliguri']">
+                <p className="text-zinc-900 text-sm font-bold  ">
                   মোহাম্মদ ফারুক
                 </p>
-                <p className="text-zinc-600 text-xs font-normal font-['Hind_Siliguri']">
+                <p className="text-zinc-600 text-xs font-normal  ">
                   ১ম ব্যাচের শিক্ষার্থী
                 </p>
               </div>
@@ -83,7 +81,7 @@ const Review = () => {
               ))}
             </div>
             {/* Text */}
-            <p className="text-zinc-900 text-sm font-normal font-['Hind_Siliguri'] leading-snug">
+            <p className="text-zinc-900 text-sm font-normal   leading-snug">
               আমি প্রশিক্ষণের মাধ্যমে আমার আত্মবিশ্বাস বাড়াতে সক্ষম হয়েছি।
               ক্যারিয়ার গঠনে এই প্রশিক্ষণ অত্যন্ত সহায়ক ছিল।
             </p>
@@ -93,10 +91,10 @@ const Review = () => {
                 আ
               </div>
               <div className="flex flex-col justify-start items-start gap-0.5">
-                <p className="text-zinc-900 text-sm font-bold font-['Hind_Siliguri']">
+                <p className="text-zinc-900 text-sm font-bold  ">
                   আব্দুর রহমান
                 </p>
-                <p className="text-zinc-600 text-xs font-normal font-['Hind_Siliguri']">
+                <p className="text-zinc-600 text-xs font-normal  ">
                   ২য় ব্যাচের শিক্ষার্থী
                 </p>
               </div>

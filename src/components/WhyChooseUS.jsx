@@ -8,10 +8,10 @@ const WhyChooseUS = () => {
           {/* Left Content */}
           <div className="w-full lg:w-1/2 space-y-6 lg:space-y-8">
             <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-semibold font-['Hind_Siliguri'] text-black">
+              <h2 className="text-2xl sm:text-3xl font-semibold   text-black">
                 আমাদের কোর্স কেন করবেন?
               </h2>
-              <p className="text-base sm:text-lg font-normal font-['Hind_Siliguri'] text-black">
+              <p className="text-base sm:text-lg font-normal   text-black">
                 এই ডিজিটাল যুগকে বলা হচ্ছে কম্পিউটারের স্বর্ণযুগ। এই লক্ষ্যে
                 আমরা মা কম্পিউটার ট্রেনিং সেন্টার একটি সর্বাধুনিক মানসম্পন্ন
                 শিক্ষা প্রতিষ্ঠান গড়ে তুলেছি। শুধুমাত্র ব্যক্তিগত চাহিদা নয়
@@ -34,10 +34,10 @@ const WhyChooseUS = () => {
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-lg font-semibold font-['Hind_Siliguri'] text-black">
+                  <h3 className="text-lg font-semibold   text-black">
                     বিশেষজ্ঞ প্রশিক্ষক
                   </h3>
-                  <p className="text-base font-normal font-['Hind_Siliguri'] text-black">
+                  <p className="text-base font-normal   text-black">
                     আমাদের প্রশিক্ষকরা অভিজ্ঞ এবং শিল্পের সাথে সংযুক্ত।
                   </p>
                 </div>
@@ -51,10 +51,10 @@ const WhyChooseUS = () => {
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-lg font-semibold font-['Hind_Siliguri'] text-black">
+                  <h3 className="text-lg font-semibold   text-black">
                     উপযুক্ত পাঠ্যক্রম
                   </h3>
-                  <p className="text-base font-normal font-['Hind_Siliguri'] text-black">
+                  <p className="text-base font-normal   text-black">
                     কোর্সগুলো প্রয়োজনীয় দক্ষতা উন্নয়নে সহায়তা করে।
                   </p>
                 </div>
@@ -69,10 +69,10 @@ const WhyChooseUS = () => {
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-lg font-semibold font-['Hind_Siliguri'] text-black">
+                  <h3 className="text-lg font-semibold   text-black">
                     প্রথম শ্রেণীর উপকরণ
                   </h3>
-                  <p className="text-base font-normal font-['Hind_Siliguri'] text-black">
+                  <p className="text-base font-normal   text-black">
                     আধুনিক প্রযুক্তি ও উপকরণ ব্যবহৃত হয়।
                   </p>
                 </div>
@@ -86,10 +86,10 @@ const WhyChooseUS = () => {
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-lg font-semibold font-['Hind_Siliguri'] text-black">
+                  <h3 className="text-lg font-semibold   text-black">
                     অনলাইন সাপোর্ট
                   </h3>
-                  <p className="text-base font-normal font-['Hind_Siliguri'] text-black">
+                  <p className="text-base font-normal   text-black">
                     কোর্সের পরবর্তী সময়ে সাহায্যের জন্য অনলাইন সাপোর্ট পাওয়া
                     যাবে৷
                   </p>
@@ -105,10 +105,10 @@ const WhyChooseUS = () => {
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-lg font-semibold font-['Hind_Siliguri'] text-black">
+                  <h3 className="text-lg font-semibold   text-black">
                     সার্টিফিকেট
                   </h3>
-                  <p className="text-base font-normal font-['Hind_Siliguri'] text-black">
+                  <p className="text-base font-normal   text-black">
                     সফলভাবে কোর্স সম্পন্ন হলে সনদ প্রদান করা হয়।
                   </p>
                 </div>

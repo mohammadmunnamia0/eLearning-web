@@ -15,10 +15,21 @@ const Navbar = () => {
       : "text-gray-800 rounded-[12px] px-2 py-1";
   };
 
+  const handleLinkClick = (e) => {
+    // Find the closest dropdown element and blur it
+    const dropdown = e.currentTarget.closest(".dropdown");
+    if (dropdown) {
+      const button = dropdown.querySelector('[role="button"]');
+      if (button) {
+        button.blur();
+      }
+    }
+  };
+
   return (
     <div>
       <div>
-        <p className="text-center text-[16px] font-nav p-4">আমাদের কথা</p>
+        <p className="text-center text-[16px] font-nav p-4">আমাদের শিক্ষা</p>
       </div>
       <div className="bg-sky-100">
         <div className="py-[10px] px-4 md:px-[82px]">
@@ -47,18 +58,34 @@ const Navbar = () => {
                 </div>
                 <ul
                   tabIndex={0}
-                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-4 shadow grid gap-4"
+                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-4 shadow grid gap-4 max-h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100"
                 >
-                  <NavLink to="/" className={navLinkStyle}>
+                  <NavLink
+                    to="/"
+                    className={navLinkStyle}
+                    onClick={handleLinkClick}
+                  >
                     <a>হোম</a>
                   </NavLink>
-                  <NavLink to="/course" className={navLinkStyle}>
+                  <NavLink
+                    to="/course"
+                    className={navLinkStyle}
+                    onClick={handleLinkClick}
+                  >
                     <a>কোর্স</a>
                   </NavLink>
-                  <NavLink to="/training" className={navLinkStyle}>
+                  <NavLink
+                    to="/training"
+                    className={navLinkStyle}
+                    onClick={handleLinkClick}
+                  >
                     <a>প্রশিক্ষক</a>
                   </NavLink>
-                  <NavLink to="/games" className={navLinkStyle}>
+                  <NavLink
+                    to="/games"
+                    className={navLinkStyle}
+                    onClick={handleLinkClick}
+                  >
                     <a>গেমস</a>
                   </NavLink>
                   <div className="dropdown dropdown-hover">
@@ -74,21 +101,37 @@ const Navbar = () => {
                       className="menu menu-sm dropdown-content text-black rounded-box shadow mt-3 z-[1] w-36 bg-white p-2"
                     >
                       <li>
-                        <NavLink className={navLinkStyle2} to="/photoGallery">
+                        <NavLink
+                          className={navLinkStyle2}
+                          to="/photoGallery"
+                          onClick={handleLinkClick}
+                        >
                           ফটো গ্যালারী
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink className={navLinkStyle2} to="/videoGallery">
+                        <NavLink
+                          className={navLinkStyle2}
+                          to="/videoGallery"
+                          onClick={handleLinkClick}
+                        >
                           ভিডিও গ্যালারী
                         </NavLink>
                       </li>
                     </ul>
                   </div>
-                  <NavLink to="/blog" className={navLinkStyle}>
+                  <NavLink
+                    to="/blog"
+                    className={navLinkStyle}
+                    onClick={handleLinkClick}
+                  >
                     <a>ব্লগ</a>
                   </NavLink>
-                  <NavLink to="/contact" className={navLinkStyle}>
+                  <NavLink
+                    to="/contact"
+                    className={navLinkStyle}
+                    onClick={handleLinkClick}
+                  >
                     <a>যোগাযোগ</a>
                   </NavLink>
                 </ul>

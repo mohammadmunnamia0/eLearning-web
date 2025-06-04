@@ -27,16 +27,21 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
       <div className="flex flex-wrap -mx-4">
         {/* Left Column: Message Form */}
         <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-          <h2 className="text-2xl font-semibold mb-4">আপনার ম্যাসেজ</h2>
-          <form onSubmit={onSubmit} className="bg-gray-100 p-6 rounded-lg">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4">
+            আপনার ম্যাসেজ
+          </h2>
+          <form
+            onSubmit={onSubmit}
+            className="bg-gray-100 p-4 sm:p-6 rounded-lg"
+          >
             <div className="mb-4">
               <label
                 htmlFor="name"
-                className="block text-gray-700 font-medium mb-2"
+                className="block text-sm sm:text-base text-gray-700 font-medium mb-2"
               >
                 আপনার নাম
               </label>
@@ -45,14 +50,14 @@ const Contact = () => {
                 name="name"
                 id="name"
                 required
-                className="w-full px-4 py-2 border border-teal-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50"
+                className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-teal-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50"
                 placeholder="আপনার নাম লিখুন"
               />
             </div>
             <div className="mb-4">
               <label
                 htmlFor="email"
-                className="block text-gray-700 font-medium mb-2"
+                className="block text-sm sm:text-base text-gray-700 font-medium mb-2"
               >
                 ইমেইল
               </label>
@@ -61,14 +66,14 @@ const Contact = () => {
                 name="email"
                 id="email"
                 required
-                className="w-full px-4 py-2 border border-teal-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50"
+                className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-teal-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50"
                 placeholder="আপনার ইমেইল লিখুন"
               />
             </div>
             <div className="mb-4">
               <label
                 htmlFor="subject"
-                className="block text-gray-700 font-medium mb-2"
+                className="block text-sm sm:text-base text-gray-700 font-medium mb-2"
               >
                 বিষয়
               </label>
@@ -77,14 +82,14 @@ const Contact = () => {
                 name="subject"
                 id="subject"
                 required
-                className="w-full px-4 py-2 border border-teal-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50"
+                className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-teal-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50"
                 placeholder="বিষয় লিখুন"
               />
             </div>
             <div className="mb-4">
               <label
                 htmlFor="message"
-                className="block text-gray-700 font-medium mb-2"
+                className="block text-sm sm:text-base text-gray-700 font-medium mb-2"
               >
                 ম্যাসেজ
               </label>
@@ -93,19 +98,19 @@ const Contact = () => {
                 id="message"
                 required
                 rows="4"
-                className="w-full px-4 py-2 border border-teal-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50"
+                className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-teal-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50"
                 placeholder="আপনার ম্যাসেজ লিখুন"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full bg-teal-700 text-white py-2 px-4 rounded-md hover:bg-teal-800 transition duration-300"
+              className="w-full bg-teal-700 text-white py-2 px-4 text-sm sm:text-base rounded-md hover:bg-teal-800 transition duration-300"
             >
               পাঠিয়ে দিন
             </button>
             {result && (
               <p
-                className={`mt-4 text-center ${
+                className={`mt-4 text-center text-sm sm:text-base ${
                   result === "ম্যাসেজ সফলভাবে পাঠানো হয়েছে"
                     ? "text-green-600"
                     : "text-red-600"
@@ -119,12 +124,14 @@ const Contact = () => {
 
         {/* Right Column: Contact Info */}
         <div className="w-full lg:w-1/2 px-4">
-          <h2 className="text-2xl font-semibold mb-4">যোগাযোগের তথ্য</h2>
-          <div className="bg-gray-100 p-6 rounded-lg">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4">
+            যোগাযোগের তথ্য
+          </h2>
+          <div className="bg-gray-100 p-4 sm:p-6 rounded-lg">
             <div className="flex items-center mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-teal-600 mr-2"
+                className="h-5 w-5 sm:h-6 sm:w-6 text-teal-600 mr-2"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -137,14 +144,18 @@ const Contact = () => {
                 />
               </svg>
               <div>
-                <h3 className="font-semibold text-gray-700">ঠিকানা</h3>
-                <p className="text-gray-600">বসুন্ধরা, ঢাকা</p>
+                <h3 className="text-sm sm:text-base font-semibold text-gray-700">
+                  ঠিকানা
+                </h3>
+                <p className="text-sm sm:text-base text-gray-600">
+                  বসুন্ধরা, ঢাকা
+                </p>
               </div>
             </div>
             <div className="flex items-center mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-teal-600 mr-2"
+                className="h-5 w-5 sm:h-6 sm:w-6 text-teal-600 mr-2"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -157,14 +168,18 @@ const Contact = () => {
                 />
               </svg>
               <div>
-                <h3 className="font-semibold text-gray-700">মোবাইল নম্বর</h3>
-                <p className="text-gray-600">01888666619, 01867746587</p>
+                <h3 className="text-sm sm:text-base font-semibold text-gray-700">
+                  মোবাইল নম্বর
+                </h3>
+                <p className="text-sm sm:text-base text-gray-600">
+                  01888666619, 01867746587
+                </p>
               </div>
             </div>
             <div className="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-teal-600 mr-2"
+                className="h-5 w-5 sm:h-6 sm:w-6 text-teal-600 mr-2"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -177,8 +192,12 @@ const Contact = () => {
                 />
               </svg>
               <div>
-                <h3 className="font-semibold text-gray-700">ইমেইল</h3>
-                <p className="text-gray-600">amadershikkha@gmail.com</p>
+                <h3 className="text-sm sm:text-base font-semibold text-gray-700">
+                  ইমেইল
+                </h3>
+                <p className="text-sm sm:text-base text-gray-600">
+                  amadershikkha@gmail.com
+                </p>
               </div>
             </div>
           </div>
@@ -186,9 +205,11 @@ const Contact = () => {
       </div>
 
       {/* Map Section */}
-      <div className="mt-8">
-        <h2 className="text-2xl font-semibold mb-4">আমাদের অবস্থান</h2>
-        <div className="w-full h-[450px] rounded-lg overflow-hidden">
+      <div className="mt-6 sm:mt-8">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-4">
+          আমাদের অবস্থান
+        </h2>
+        <div className="w-full h-[300px] sm:h-[400px] lg:h-[450px] rounded-lg overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.893655319245!2d90.38806817468041!3d23.751171388748002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bcd681372b%3A0x5c2b8755e4327004!2sBashundhara%20City%20Shopping%20Complex!5e0!3m2!1sen!2sbd!4v1748255461034!5m2!1sen!2sbd"
             className="w-full h-full"

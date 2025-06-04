@@ -30,10 +30,10 @@ const Certificates = () => {
     <section className="mt-[140px] px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col items-center mb-8 sm:mb-12">
-          <div className="text-center text-black text-2xl sm:text-3xl font-semibold font-['Hind_Siliguri']">
+          <div className="text-center text-black text-2xl sm:text-3xl font-semibold  ">
             অনুমোদন সমূহ
           </div>
-          <div className="text-center text-black text-base sm:text-lg font-normal font-['Hind_Siliguri'] mt-2">
+          <div className="text-center text-black text-base sm:text-lg font-normal   mt-2">
             আমাদের শিক্ষা কম্পিউটার ট্রেনিং সেন্টার এর সরকারি অনুমোদন সমূহ
           </div>
         </div>
@@ -49,15 +49,15 @@ const Certificates = () => {
                   src={card.imageUrl}
                   alt={card.title}
                 />
-                <div className="justify-start text-black text-base font-semibold font-['Hind_Siliguri']">
+                <div className="justify-start text-black text-base font-semibold  ">
                   {card.title}
                 </div>
               </div>
               <div className="self-stretch flex flex-col justify-start items-start gap-1 mt-2">
-                <div className="justify-start text-black text-sm font-medium font-['Hind_Siliguri']">
+                <div className="justify-start text-black text-sm font-medium  ">
                   {card.description}
                 </div>
-                <div className="justify-start text-black text-sm font-medium font-['Hind_Siliguri']">
+                <div className="justify-start text-black text-sm font-medium  ">
                   {card.certificateId}
                 </div>
               </div>

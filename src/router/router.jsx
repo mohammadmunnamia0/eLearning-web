@@ -11,6 +11,7 @@ import Course from "../pages/Course";
 import CourseDetails from "../pages/CourseDetails";
 import Games from "../pages/Games";
 import Home from "../pages/Home";
+import SuccessStories from "../pages/SuccessStories";
 import Training from "../pages/Trainer";
 
 export const router = createBrowserRouter([
@@ -62,6 +63,10 @@ export const router = createBrowserRouter([
       {
         path: "/videoGallery",
         element: <VideoGallery></VideoGallery>,
+      },
+      {
+        path: "/success-stories",
+        element: <SuccessStories></SuccessStories>,
       },
     ],
   },

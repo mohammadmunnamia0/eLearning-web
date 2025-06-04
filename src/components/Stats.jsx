@@ -10,10 +10,8 @@ const Stats = () => {
             <div className="p-3 bg-white rounded-sm shadow-[0px_5.6px_5.6px_0px_rgba(0,0,0,0.25)] mb-3">
               {/* Icon placeholder */}
             </div>
-            <div className="text-black text-2xl font-semibold font-['Hind_Siliguri']">
-              16
-            </div>
-            <div className="text-black text-base font-normal font-['Hind_Siliguri']">
+            <div className="text-black text-2xl font-semibold  ">16</div>
+            <div className="text-black text-base font-normal  ">
               বর্তমান কোর্স
             </div>
           </div>
@@ -23,10 +21,8 @@ const Stats = () => {
             <div className="p-3 bg-white rounded-sm shadow-[0px_5.6px_5.6px_0px_rgba(0,0,0,0.25)] mb-3">
               {/* Icon placeholder */}
             </div>
-            <div className="text-black text-2xl font-semibold font-['Hind_Siliguri']">
-              7
-            </div>
-            <div className="text-black text-base font-normal font-['Hind_Siliguri']">
+            <div className="text-black text-2xl font-semibold  ">7</div>
+            <div className="text-black text-base font-normal  ">
               ইন্সট্রাক্টর
             </div>
           </div>
@@ -36,12 +32,8 @@ const Stats = () => {
             <div className="p-3 bg-white rounded-sm shadow-[0px_5.6px_5.6px_0px_rgba(0,0,0,0.25)] mb-3">
               {/* Icon placeholder */}
             </div>
-            <div className="text-black text-2xl font-semibold font-['Hind_Siliguri']">
-              60
-            </div>
-            <div className="text-black text-base font-normal font-['Hind_Siliguri']">
-              শিক্ষার্থী
-            </div>
+            <div className="text-black text-2xl font-semibold  ">60</div>
+            <div className="text-black text-base font-normal  ">শিক্ষার্থী</div>
           </div>
 
           {/* Stat 4 */}
@@ -49,10 +41,8 @@ const Stats = () => {
             <div className="p-3 bg-white rounded-sm shadow-[0px_5.6px_5.6px_0px_rgba(0,0,0,0.25)] mb-3">
               {/* Icon placeholder */}
             </div>
-            <div className="text-black text-2xl font-semibold font-['Hind_Siliguri']">
-              277
-            </div>
-            <div className="text-black text-base font-normal font-['Hind_Siliguri']">
+            <div className="text-black text-2xl font-semibold  ">277</div>
+            <div className="text-black text-base font-normal  ">
               কোর্স সম্পূর্ণ করেছেন
             </div>
           </div>
